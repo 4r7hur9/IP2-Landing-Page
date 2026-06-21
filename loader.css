@@ -1,0 +1,82 @@
+html {
+    scrollbar-gutter: stable;
+}
+
+body.loader-active {
+    overflow: hidden;
+    touch-action: none;
+}
+
+body.loader-active > .site-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.42s ease, visibility 0s linear 0s;
+    background:
+        radial-gradient(circle at 50% 34%, rgba(30, 78, 216, 0.12), transparent 28%),
+        radial-gradient(circle at 50% 66%, rgba(255, 84, 0, 0.08), transparent 32%),
+        rgba(15, 20, 26, 0.26);
+    -webkit-backdrop-filter: blur(14px) saturate(108%);
+    backdrop-filter: blur(14px) saturate(108%);
+    pointer-events: auto;
+    cursor: progress;
+}
+
+body.loader-active > .site-loader .site-loader__stage {
+    width: min(52vw, 220px);
+    max-width: calc(100vw - 20px);
+    padding: 5px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    box-shadow:
+        0 10px 22px rgba(15, 20, 26, 0.08),
+        0 0 0 1px rgba(15, 20, 26, 0.03);
+    overflow: hidden;
+    filter: none;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+body.loader-active > .site-loader .site-loader__media {
+    width: min(88%, 180px);
+    height: auto;
+    display: block;
+    max-height: min(58vh, 320px);
+    object-fit: contain;
+    border: 0;
+    background: transparent;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 640px) {
+    body.loader-active > .site-loader .site-loader__stage {
+        width: min(78vw, 190px);
+        padding: 4px;
+        border-radius: 20px;
+    }
+
+    body.loader-active > .site-loader .site-loader__media {
+        width: min(84%, 150px);
+        max-height: min(48vh, 250px);
+    }
+}
+
+body.loader-active > .site-loader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.42s ease, visibility 0s linear 0.42s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.loader-active > .site-loader .site-loader__media {
+        animation: none;
+    }
+}

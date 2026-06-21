@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pol&iacute;tica de Privacidade | IP2 Internet</title>
+<meta content="Pol&iacute;tica de privacidade da IP2 INTERNET com informa&ccedil;&otilde;es sobre coleta, uso, prote&ccedil;&atilde;o de dados e canais de contato." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="./loader.css" rel="stylesheet"/>
+<link href="./gif.gif" rel="preload" as="image" type="image/gif"/>
+<noscript>
+<style>
+        body.loader-active {
+            overflow: auto !important;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            touch-action: auto !important;
+        }
+
+        body.loader-active > .site-loader {
+            display: none !important;
+        }
+</style>
+</noscript>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "brand-orange": "#FF5400",
+                        "brand-blue": "#1E4ED8",
+                        "background": "#0f141a",
+                        "surface-container-lowest": "#090f15",
+                        "surface-container": "#1b2027",
+                        "surface-container-high": "#20252d",
+                        "surface-container-highest": "#30353d",
+                        "outline": "#ac897e",
+                        "outline-variant": "#5c4037",
+                        "on-surface": "#dee2ec",
+                        "on-surface-variant": "#e5beb2"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "xl": "80px"
+                    },
+                    fontFamily: {
+                        "label-md": ["JetBrains Mono", "monospace"],
+                        "label-sm": ["JetBrains Mono", "monospace"],
+                        "headline-lg": ["Space Grotesk", "sans-serif"],
+                        "headline-sm": ["Space Grotesk", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "label-md": ["14px", {lineHeight: "16px", fontWeight: "700"}],
+                        "label-sm": ["12px", {lineHeight: "14px", fontWeight: "700"}],
+                        "headline-lg": ["40px", {lineHeight: "48px", fontWeight: "700"}],
+                        "headline-sm": ["24px", {lineHeight: "32px", fontWeight: "600"}],
+                        "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}],
+                        "body-sm": ["14px", {lineHeight: "20px", fontWeight: "400"}]
+                    }
+                }
+            }
+        };
+    </script>
+<script defer src="./loader.js"></script>
+<style>
+        :root {
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100dvh;
+            background:
+                radial-gradient(circle at 12% 18%, rgba(30, 78, 216, 0.18), transparent 26%),
+                radial-gradient(circle at 88% 16%, rgba(255, 84, 0, 0.16), transparent 22%),
+                linear-gradient(180deg, #0b1016 0%, #0f141a 42%, #090f15 100%);
+            color: #dee2ec;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .connection-bg {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 18% 24%, rgba(30, 78, 216, 0.22), transparent 32%),
+                radial-gradient(circle at 78% 18%, rgba(255, 84, 0, 0.18), transparent 30%),
+                linear-gradient(180deg, rgba(15, 20, 26, 0.72), rgba(15, 20, 26, 0.94)),
+                url("./assets/tech-connections-bg.svg") center / cover no-repeat;
+        }
+
+        .connection-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(90deg, rgba(15, 20, 26, 0.94) 0%, rgba(15, 20, 26, 0.58) 48%, rgba(15, 20, 26, 0.76) 100%),
+                radial-gradient(circle at center, transparent 0, rgba(15, 20, 26, 0.16) 44%, rgba(15, 20, 26, 0.84) 100%);
+        }
+
+        .connection-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.38;
+            background-image:
+                linear-gradient(rgba(222, 226, 236, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(222, 226, 236, 0.05) 1px, transparent 1px);
+            background-size: 44px 44px;
+            mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+        }
+
+        .connection-bg > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-logo {
+            object-fit: contain;
+            filter: drop-shadow(0 0 14px rgba(255, 84, 0, 0.28));
+        }
+
+        .glow-orange {
+            box-shadow: 0 0 22px rgba(255, 84, 0, 0.28);
+        }
+
+        .nav-shell {
+            background: rgba(9, 15, 21, 0.8);
+            border-bottom: 1px solid rgba(172, 137, 126, 0.2);
+            backdrop-filter: blur(14px);
+        }
+
+        .tech-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 181, 156, 0.36), transparent);
+        }
+
+        .cta-primary,
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 999px;
+            padding: 14px 22px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 13px;
+            line-height: 15px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease;
+        }
+
+        .cta-primary {
+            border: 1px solid transparent;
+            background: #ff5400;
+            color: #ffffff;
+            box-shadow: 0 0 22px rgba(255, 84, 0, 0.24);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            background: #ff6b24;
+        }
+
+        .cta-secondary {
+            border: 1px solid rgba(172, 137, 126, 0.22);
+            background: rgba(15, 20, 26, 0.62);
+            color: #dee2ec;
+        }
+
+        .cta-secondary:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 181, 156, 0.34);
+            color: #ffb59c;
+        }
+
+        .policy-shell,
+        .policy-meta-card,
+        .policy-contact-card {
+            border: 1px solid rgba(172, 137, 126, 0.22);
+            background:
+                radial-gradient(circle at 88% 0%, rgba(30, 78, 216, 0.12), transparent 28%),
+                rgba(26, 31, 38, 0.82);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+        }
+
+        .policy-shell {
+            border-radius: 28px;
+            padding: 28px;
+        }
+
+        .policy-meta-card,
+        .policy-contact-card {
+            border-radius: 24px;
+            padding: 22px;
+        }
+
+        .policy-meta-card {
+            position: sticky;
+            top: 108px;
+        }
+
+        .policy-section + .policy-section {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(172, 137, 126, 0.16);
+        }
+
+        .policy-title {
+            margin: 0 0 12px;
+            color: #dee2ec;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 28px;
+            line-height: 34px;
+            font-weight: 600;
+        }
+
+        .policy-copy {
+            margin: 0;
+            color: rgba(222, 226, 236, 0.82);
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        .policy-copy + .policy-copy {
+            margin-top: 14px;
+        }
+
+        .policy-list {
+            margin: 16px 0 0;
+            padding-left: 20px;
+            color: rgba(222, 226, 236, 0.82);
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        .policy-list li + li {
+            margin-top: 10px;
+        }
+
+        .policy-anchor-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .policy-anchor {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e5beb2;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .policy-anchor:hover {
+            color: #ffb59c;
+            transform: translateX(2px);
+        }
+
+        .policy-note {
+            border-radius: 18px;
+            border: 1px solid rgba(172, 137, 126, 0.16);
+            background: rgba(15, 20, 26, 0.56);
+            padding: 14px 16px;
+            color: rgba(229, 190, 178, 0.78);
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+        .app-strip {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(172, 137, 126, 0.16);
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255, 84, 0, 0.08), transparent 26%),
+                radial-gradient(circle at 86% 14%, rgba(30, 78, 216, 0.12), transparent 24%),
+                linear-gradient(180deg, rgba(27, 32, 39, 0.96), rgba(18, 24, 31, 0.98));
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+        }
+
+        .app-strip::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.06;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.9) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.9) 1px, transparent 1px);
+            background-size: 52px 52px;
+            mask-image: radial-gradient(circle at center, #000, transparent 82%);
+        }
+
+        .app-strip > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .app-strip .app-band-kicker {
+            color: rgba(229, 190, 178, 0.74);
+        }
+
+        .app-strip .app-band-title {
+            color: #dee2ec;
+        }
+
+        .app-strip .app-band-copy {
+            color: rgba(222, 226, 236, 0.74);
+        }
+
+        .store-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 8px;
+            border-radius: 16px;
+            border: 1px solid rgba(229, 190, 178, 0.14);
+            background: rgba(9, 15, 21, 0.5);
+            backdrop-filter: blur(10px);
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+        }
+
+        .store-link:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 181, 156, 0.24);
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+        }
+
+        .store-link img {
+            display: block;
+            width: auto;
+            height: 48px;
+        }
+
+        @media (max-width: 640px) {
+            .store-link {
+                padding: 5px 7px;
+                border-radius: 14px;
+            }
+
+            .store-link img {
+                height: 44px;
+            }
+        }
+
+        .site-footer {
+            background:
+                linear-gradient(180deg, rgba(9, 15, 21, 0.92), rgba(9, 15, 21, 1)),
+                url("./assets/tech-connections-bg.svg") center / cover no-repeat;
+            border-top: 1px solid rgba(172, 137, 126, 0.16);
+        }
+
+        .footer-link {
+            color: #e5beb2;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: #ffb59c;
+            transform: translateX(2px);
+        }
+
+        @media (max-width: 1023px) {
+            .policy-meta-card {
+                position: static;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .policy-shell,
+            .policy-meta-card,
+            .policy-contact-card {
+                border-radius: 22px;
+            }
+
+            .policy-shell {
+                padding: 22px;
+            }
+
+            .policy-title {
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            .store-link img {
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface bg-background loader-active" aria-busy="true">
+<div class="site-loader" aria-hidden="true">
+<div class="site-loader__stage">
+<img class="site-loader__media" src="./gif.gif" alt="" width="1080" height="1350" />
+</div>
+</div>
+<nav class="nav-shell fixed top-0 left-0 right-0 z-50">
+<div class="max-w-7xl mx-auto px-gutter py-4 flex items-center justify-between gap-md">
+<a class="flex items-center gap-3 min-w-0" href="./index.html">
+<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="./ip2_logo_simbolo_transparente_1x1_clean.png"/>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">IP2 INTERNET</span>
+</a>
+<div class="flex items-center gap-sm">
+<a class="hidden sm:inline-flex cta-secondary" href="./index.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+Ver planos
+</a>
+<a class="cta-primary glow-orange" href="./contato.html">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+Contato
+</a>
+</div>
+</div>
+</nav>
+
+<main>
+<section class="connection-bg pt-[118px] pb-xl">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="space-y-lg">
+<div class="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-xl items-start">
+<div class="space-y-md">
+<div class="flex items-center gap-3">
+<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="./ip2_logo_simbolo_transparente_1x1_clean.png"/>
+<span class="font-label-md text-label-md text-brand-orange uppercase tracking-[0.18em]">Pol&iacute;tica de privacidade</span>
+</div>
+<h1 class="font-headline-lg text-[clamp(2.6rem,5vw,4.8rem)] leading-[0.95] tracking-tight text-on-surface">Transpar&ecirc;ncia no uso das suas informa&ccedil;&otilde;es</h1>
+<div class="tech-line w-28"></div>
+<p class="max-w-xl font-body-md text-body-md text-on-surface-variant">Aqui voc&ecirc; encontra, de forma clara, como a IP2 INTERNET coleta, utiliza, armazena e protege seus dados em nossos canais digitais.</p>
+<div class="policy-note max-w-xl">Confira abaixo as informa&ccedil;&otilde;es principais sobre privacidade e os canais oficiais para falar com a IP2 INTERNET sempre que precisar.</div>
+</div>
+
+<aside>
+<div class="policy-meta-card">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Informa&ccedil;&otilde;es importantes</h2>
+<div class="grid gap-sm mt-md">
+<div class="rounded-2xl border border-outline-variant/20 bg-surface-container/60 px-md py-sm">
+<p class="font-label-sm text-label-sm text-brand-orange uppercase tracking-[0.14em]">Empresa respons&aacute;vel</p>
+<p class="font-body-md text-body-md text-on-surface mt-xs">IP2 INTERNET</p>
+</div>
+<div class="rounded-2xl border border-outline-variant/20 bg-surface-container/60 px-md py-sm">
+<p class="font-label-sm text-label-sm text-brand-orange uppercase tracking-[0.14em]">E-mail de contato</p>
+<a class="footer-link inline-flex items-center gap-2 mt-xs" href="mailto:comercial@grupoip2.com.br">
+comercial@grupoip2.com.br
+</a>
+</div>
+<div class="rounded-2xl border border-outline-variant/20 bg-surface-container/60 px-md py-sm">
+<p class="font-label-sm text-label-sm text-brand-orange uppercase tracking-[0.14em]">Pol&iacute;tica v&aacute;lida desde</p>
+<p class="font-body-md text-body-md text-on-surface mt-xs">19/06/2026</p>
+</div>
+</div>
+<div class="policy-anchor-list">
+<a class="policy-anchor font-body-sm text-body-sm" href="#coleta"><span class="material-symbols-outlined text-[18px]">chevron_right</span>Coleta e uso de dados</a>
+<a class="policy-anchor font-body-sm text-body-sm" href="#retencao"><span class="material-symbols-outlined text-[18px]">chevron_right</span>Reten&ccedil;&atilde;o e prote&ccedil;&atilde;o</a>
+<a class="policy-anchor font-body-sm text-body-sm" href="#cookies"><span class="material-symbols-outlined text-[18px]">chevron_right</span>Cookies e publicidade</a>
+<a class="policy-anchor font-body-sm text-body-sm" href="#compromisso"><span class="material-symbols-outlined text-[18px]">chevron_right</span>Compromisso do usu&aacute;rio</a>
+<a class="policy-anchor font-body-sm text-body-sm" href="#mais-informacoes"><span class="material-symbols-outlined text-[18px]">chevron_right</span>Mais informa&ccedil;&otilde;es</a>
+</div>
+</div>
+</aside>
+</div>
+<div class="policy-contact-card w-full">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-md">
+<div class="max-w-3xl">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Fale com a IP2 INTERNET</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Use nossos canais oficiais para solicitar planos, suporte, segunda via, informa&ccedil;&otilde;es comerciais e demais atendimentos.</p>
+</div>
+<div class="flex flex-wrap gap-sm">
+<a class="cta-secondary" href="tel:+558540420052">
+<span class="material-symbols-outlined text-[18px]">call</span>
+Ligar para (85) 4042-0052
+</a>
+<a class="cta-primary" href="./contato.html">
+<span class="material-symbols-outlined text-[18px]">send</span>
+Enviar mensagem
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="pb-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-gutter">
+<article class="policy-shell">
+<section class="policy-section" id="introducao">
+<h2 class="policy-title">Introdu&ccedil;&atilde;o</h2>
+<p class="policy-copy">A sua privacidade &eacute; importante para n&oacute;s. &Eacute; pol&iacute;tica da IP2 Internet respeitar a sua privacidade em rela&ccedil;&atilde;o a qualquer informa&ccedil;&atilde;o sua que possamos coletar no site <a class="footer-link" href="https://www.ip2internet.com.br/" rel="noopener noreferrer" target="_blank">IP2 Internet</a> e em outros canais que possu&iacute;mos e operamos.</p>
+</section>
+
+<section class="policy-section" id="coleta">
+<h2 class="policy-title">Coleta e uso de informa&ccedil;&otilde;es</h2>
+<p class="policy-copy">Solicitamos informa&ccedil;&otilde;es pessoais apenas quando realmente precisamos delas para fornecer um servi&ccedil;o. Fazemos isso por meios justos e legais, com seu conhecimento e consentimento, informando tamb&eacute;m por que estamos coletando e como esses dados ser&atilde;o utilizados.</p>
+<p class="policy-copy">Voc&ecirc; &eacute; livre para recusar a nossa solicita&ccedil;&atilde;o de informa&ccedil;&otilde;es pessoais, entendendo que talvez n&atilde;o possamos fornecer alguns dos servi&ccedil;os desejados.</p>
+</section>
+
+<section class="policy-section" id="retencao">
+<h2 class="policy-title">Reten&ccedil;&atilde;o e prote&ccedil;&atilde;o dos dados</h2>
+<p class="policy-copy">Apenas retemos as informa&ccedil;&otilde;es coletadas pelo tempo necess&aacute;rio para fornecer o servi&ccedil;o solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceit&aacute;veis para evitar perdas, roubos, acesso, divulga&ccedil;&atilde;o, c&oacute;pia, uso ou modifica&ccedil;&atilde;o n&atilde;o autorizados.</p>
+<p class="policy-copy">N&atilde;o compartilhamos informa&ccedil;&otilde;es de identifica&ccedil;&atilde;o pessoal publicamente ou com terceiros, exceto quando exigido por lei.</p>
+</section>
+
+<section class="policy-section" id="links-externos">
+<h2 class="policy-title">Links externos</h2>
+<p class="policy-copy">Nosso site pode conter links para sites externos que n&atilde;o s&atilde;o operados por n&oacute;s. Esteja ciente de que n&atilde;o temos controle sobre o conte&uacute;do e as pr&aacute;ticas desses sites e n&atilde;o podemos aceitar responsabilidade por suas respectivas pol&iacute;ticas de privacidade.</p>
+</section>
+
+<section class="policy-section" id="cookies">
+<h2 class="policy-title">Cookies, publicidade e parceiros</h2>
+<p class="policy-copy">O uso continuado de nosso site ser&aacute; considerado como aceita&ccedil;&atilde;o de nossas pr&aacute;ticas em torno de privacidade e informa&ccedil;&otilde;es pessoais. Caso tenha d&uacute;vidas sobre como lidamos com dados do usu&aacute;rio, entre em contato conosco.</p>
+<ul class="policy-list">
+<li>O servi&ccedil;o Google AdSense, quando utilizado para publicidade, pode usar o cookie DoubleClick para exibir an&uacute;ncios mais relevantes e limitar o n&uacute;mero de vezes que um mesmo an&uacute;ncio aparece para voc&ecirc;.</li>
+<li>Para mais informa&ccedil;&otilde;es sobre o Google AdSense, consulte as FAQs oficiais de privacidade do Google AdSense.</li>
+<li>Utilizamos an&uacute;ncios para compensar custos de funcionamento do site e apoiar futuros desenvolvimentos. Cookies de publicidade comportamental podem ser usados para apresentar an&uacute;ncios mais relevantes, de forma an&ocirc;nima, com base em interesses de navega&ccedil;&atilde;o.</li>
+<li>Parceiros podem anunciar em nosso nome, e cookies de rastreamento de afiliados podem ser usados para identificar se o acesso ocorreu por meio desses parceiros, inclusive para fins de creditamento e campanhas promocionais aplic&aacute;veis.</li>
+</ul>
+</section>
+
+<section class="policy-section" id="compromisso">
+<h2 class="policy-title">Compromisso do usu&aacute;rio</h2>
+<p class="policy-copy">O usu&aacute;rio se compromete a fazer uso adequado dos conte&uacute;dos e das informa&ccedil;&otilde;es que a IP2 Internet oferece no site, incluindo, mas n&atilde;o se limitando, aos seguintes pontos:</p>
+<ul class="policy-list">
+<li>N&atilde;o se envolver em atividades que sejam ilegais ou contr&aacute;rias &agrave; boa-f&eacute; e &agrave; ordem p&uacute;blica.</li>
+<li>N&atilde;o difundir propaganda ou conte&uacute;do de natureza racista, xenof&oacute;bica, jogos de sorte ou azar, pornografia ilegal, apologia ao terrorismo ou qualquer material contr&aacute;rio aos direitos humanos.</li>
+<li>N&atilde;o causar danos aos sistemas f&iacute;sicos e l&oacute;gicos da IP2 Internet, de seus fornecedores ou de terceiros, nem introduzir ou disseminar v&iacute;rus inform&aacute;ticos ou outros sistemas capazes de provocar danos.</li>
+</ul>
+</section>
+
+<section class="policy-section" id="mais-informacoes">
+<h2 class="policy-title">Mais informa&ccedil;&otilde;es</h2>
+<p class="policy-copy">Esperamos que esta pol&iacute;tica esteja clara. Como mencionado anteriormente, se houver algo que voc&ecirc; n&atilde;o tenha certeza se precisa ou n&atilde;o, geralmente &eacute; mais seguro manter cookies ativados caso interaja com recursos do site que dependam deles.</p>
+<p class="policy-copy">Esta pol&iacute;tica &eacute; efetiva a partir de 19/06/2026. Para esclarecimentos adicionais, utilize nossos canais oficiais de atendimento.</p>
+</section>
+</article>
+</div>
+</section>
+
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-5xl mx-auto px-gutter">
+<div class="app-strip rounded-[28px] px-lg py-lg text-center">
+<span class="app-band-kicker font-label-sm text-label-sm uppercase tracking-[0.24em]">Acesso a faturas e chamados</span>
+<h2 class="app-band-title font-headline-lg text-headline-lg mt-sm">Baixe Nosso App Nas Lojas</h2>
+<p class="app-band-copy font-body-md text-body-md max-w-2xl mx-auto mt-sm">Use o app <strong>IP2 SAC</strong> para segunda via, abertura de chamados, atualizacao de boleto, diagnostico de conexao e avisos do servico.</p>
+<div class="flex flex-wrap items-center justify-center gap-md mt-lg">
+<a class="store-link" href="https://apps.apple.com/br/app/ip2-sac/id1606812873" rel="noopener noreferrer" target="_blank">
+<img alt="Baixar IP2 SAC na App Store" src="./app-store-badge.svg"/>
+</a>
+<a class="store-link" href="https://play.google.com/store/apps/details?hl=pt_BR&amp;id=br.com.grupoip2.sac" rel="noopener noreferrer" target="_blank">
+<img alt="Baixar IP2 SAC no Google Play" src="./google-play-badge.svg"/>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer py-lg">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr] gap-lg items-start">
+<div class="space-y-sm">
+<div class="flex items-center gap-3">
+<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="./ip2_logo_simbolo_transparente_1x1_clean.png"/>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">IP2 INTERNET</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Internet de fibra com atendimento para planos residenciais, empresariais, suporte e servicos digitais.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Grupo IP2 2026. Todos os direitos reservados.</p>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-md">Atalhos</h3>
+<nav class="grid grid-cols-1 gap-sm">
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="./index.html"><span class="material-symbols-outlined text-[18px]">home</span>Ver planos</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="./contato.html"><span class="material-symbols-outlined text-[18px]">support_agent</span>Contato</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://www.ip2internet.com.br/central-do-assinante/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">account_circle</span>Central do assinante</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://www.ip2internet.com.br/portal-apps/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">apps</span>Portal de aplicativos</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://openspeedtest.grupoip2.com.br/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">speed</span>Teste de velocidade</a>
+</nav>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-md">Contato oficial</h3>
+<div class="grid gap-sm font-body-sm text-body-sm text-on-surface-variant">
+<a class="footer-link inline-flex items-center gap-2" href="mailto:comercial@grupoip2.com.br"><span class="material-symbols-outlined text-[18px]">alternate_email</span>comercial@grupoip2.com.br</a>
+<a class="footer-link inline-flex items-center gap-2" href="mailto:suporte@grupoip2.com.br"><span class="material-symbols-outlined text-[18px]">support_agent</span>suporte@grupoip2.com.br</a>
+<a class="footer-link inline-flex items-center gap-2" href="tel:+558540420052"><span class="material-symbols-outlined text-[18px]">call</span>(85) 4042-0052</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contato | IP2 Internet</title>
+<meta content="P&aacute;gina de contato da IP2 INTERNET para solicitar atendimento, planos e suporte." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="./loader.css" rel="stylesheet"/>
+<link href="./gif.gif" rel="preload" as="image" type="image/gif"/>
+<noscript>
+<style>
+        body.loader-active {
+            overflow: auto !important;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            touch-action: auto !important;
+        }
+
+        body.loader-active > .site-loader {
+            display: none !important;
+        }
+</style>
+</noscript>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "brand-orange": "#FF5400",
+                        "brand-blue": "#1E4ED8",
+                        "background": "#0f141a",
+                        "surface-container-lowest": "#090f15",
+                        "surface-container": "#1b2027",
+                        "surface-container-high": "#20252d",
+                        "surface-container-highest": "#30353d",
+                        "outline": "#ac897e",
+                        "outline-variant": "#5c4037",
+                        "on-surface": "#dee2ec",
+                        "on-surface-variant": "#e5beb2"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "xl": "80px"
+                    },
+                    fontFamily: {
+                        "label-md": ["JetBrains Mono", "monospace"],
+                        "label-sm": ["JetBrains Mono", "monospace"],
+                        "headline-lg": ["Space Grotesk", "sans-serif"],
+                        "headline-sm": ["Space Grotesk", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "label-md": ["14px", {lineHeight: "16px", fontWeight: "700"}],
+                        "label-sm": ["12px", {lineHeight: "14px", fontWeight: "700"}],
+                        "headline-lg": ["40px", {lineHeight: "48px", fontWeight: "700"}],
+                        "headline-sm": ["24px", {lineHeight: "32px", fontWeight: "600"}],
+                        "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}],
+                        "body-sm": ["14px", {lineHeight: "20px", fontWeight: "400"}]
+                    }
+                }
+            }
+        };
+    </script>
+<script defer src="./loader.js"></script>
+<style>
+        :root {
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100dvh;
+            background:
+                radial-gradient(circle at 12% 18%, rgba(30, 78, 216, 0.18), transparent 26%),
+                radial-gradient(circle at 88% 16%, rgba(255, 84, 0, 0.16), transparent 22%),
+                linear-gradient(180deg, #0b1016 0%, #0f141a 42%, #090f15 100%);
+            color: #dee2ec;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .connection-bg {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 18% 24%, rgba(30, 78, 216, 0.22), transparent 32%),
+                radial-gradient(circle at 78% 18%, rgba(255, 84, 0, 0.18), transparent 30%),
+                linear-gradient(180deg, rgba(15, 20, 26, 0.72), rgba(15, 20, 26, 0.94)),
+                url("./assets/tech-connections-bg.svg") center / cover no-repeat;
+        }
+
+        .connection-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(90deg, rgba(15, 20, 26, 0.94) 0%, rgba(15, 20, 26, 0.58) 48%, rgba(15, 20, 26, 0.76) 100%),
+                radial-gradient(circle at center, transparent 0, rgba(15, 20, 26, 0.16) 44%, rgba(15, 20, 26, 0.84) 100%);
+        }
+
+        .connection-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.38;
+            background-image:
+                linear-gradient(rgba(222, 226, 236, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(222, 226, 236, 0.05) 1px, transparent 1px);
+            background-size: 44px 44px;
+            mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+        }
+
+        .connection-bg > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-logo {
+            object-fit: contain;
+            filter: drop-shadow(0 0 14px rgba(255, 84, 0, 0.28));
+        }
+
+        .glow-orange {
+            box-shadow: 0 0 22px rgba(255, 84, 0, 0.28);
+        }
+
+        .nav-shell {
+            background: rgba(9, 15, 21, 0.8);
+            border-bottom: 1px solid rgba(172, 137, 126, 0.2);
+            backdrop-filter: blur(14px);
+        }
+
+        .tech-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 181, 156, 0.36), transparent);
+        }
+
+        .support-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 84, 0, 0.24);
+            background: rgba(255, 84, 0, 0.1);
+            color: #ffb59c;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .contact-info-card,
+        .form-shell {
+            border: 1px solid rgba(172, 137, 126, 0.22);
+            background:
+                radial-gradient(circle at 88% 0%, rgba(30, 78, 216, 0.12), transparent 28%),
+                rgba(26, 31, 38, 0.82);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+        }
+
+        .contact-info-card {
+            border-radius: 24px;
+            padding: 22px;
+            transition: transform 0.24s ease, border-color 0.24s ease;
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255, 181, 156, 0.36);
+        }
+
+        .contact-info-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(172, 137, 126, 0.18);
+            background: rgba(48, 53, 61, 0.32);
+            color: #ff8a58;
+        }
+
+        .form-shell {
+            border-radius: 28px;
+            padding: 28px;
+        }
+
+        .field-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e5beb2;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .field-control,
+        .field-select,
+        .field-textarea {
+            width: 100%;
+            border: 1px solid rgba(172, 137, 126, 0.2);
+            border-radius: 18px;
+            background: #000000;
+            color: #dee2ec;
+            padding: 14px 16px;
+            font-family: Inter, sans-serif;
+            font-size: 15px;
+            line-height: 22px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        input.field-control[type="text"],
+        input.field-control[type="email"],
+        input.field-control[type="tel"] {
+            background: #000000 !important;
+            color: #dee2ec !important;
+            -webkit-text-fill-color: #dee2ec;
+        }
+
+        .field-control::placeholder,
+        .field-textarea::placeholder {
+            color: rgba(222, 226, 236, 0.62);
+        }
+
+        input.field-control[type="text"]::placeholder,
+        input.field-control[type="email"]::placeholder,
+        input.field-control[type="tel"]::placeholder {
+            color: rgba(222, 226, 236, 0.62) !important;
+            opacity: 1;
+            -webkit-text-fill-color: rgba(222, 226, 236, 0.62);
+        }
+
+        .field-control:focus,
+        .field-select:focus,
+        .field-textarea:focus {
+            outline: none;
+            border-color: rgba(255, 84, 0, 0.72);
+            box-shadow: 0 0 0 3px rgba(255, 84, 0, 0.12);
+            transform: translateY(-1px);
+        }
+
+        .field-select {
+            appearance: none;
+            background-image:
+                linear-gradient(45deg, transparent 50%, rgba(255, 181, 156, 0.9) 50%),
+                linear-gradient(135deg, rgba(255, 181, 156, 0.9) 50%, transparent 50%);
+            background-position:
+                calc(100% - 22px) calc(50% - 2px),
+                calc(100% - 16px) calc(50% - 2px);
+            background-size: 6px 6px, 6px 6px;
+            background-repeat: no-repeat;
+            padding-right: 40px;
+        }
+
+        .field-textarea {
+            min-height: 148px;
+            resize: vertical;
+        }
+
+        .helper-note {
+            color: rgba(229, 190, 178, 0.78);
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+        .cta-primary,
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 999px;
+            padding: 14px 22px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 13px;
+            line-height: 15px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease, opacity 0.22s ease;
+        }
+
+        .cta-primary {
+            border: 1px solid transparent;
+            background: #ff5400;
+            color: #ffffff;
+            box-shadow: 0 0 22px rgba(255, 84, 0, 0.24);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            background: #ff6b24;
+        }
+
+        .cta-primary:disabled {
+            opacity: 0.72;
+            cursor: wait;
+            transform: none;
+        }
+
+        .cta-secondary {
+            border: 1px solid rgba(172, 137, 126, 0.22);
+            background: rgba(15, 20, 26, 0.62);
+            color: #dee2ec;
+        }
+
+        .cta-secondary:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 181, 156, 0.34);
+            color: #ffb59c;
+        }
+
+        .consent-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 16px;
+            border-radius: 18px;
+            border: 1px solid rgba(172, 137, 126, 0.16);
+            background: rgba(15, 20, 26, 0.56);
+        }
+
+        .consent-row input {
+            margin-top: 3px;
+            accent-color: #ff5400;
+        }
+
+        .status-banner {
+            display: none;
+            margin: 0;
+            border-radius: 18px;
+            padding: 14px 16px;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+        }
+
+        .status-banner.is-visible {
+            display: block;
+        }
+
+        .status-banner.success {
+            border: 1px solid rgba(53, 182, 242, 0.26);
+            background: rgba(30, 78, 216, 0.12);
+            color: #cfe4ff;
+        }
+
+        .status-banner.error {
+            border: 1px solid rgba(255, 84, 0, 0.3);
+            background: rgba(255, 84, 0, 0.12);
+            color: #ffd6c8;
+        }
+
+        .app-strip {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(172, 137, 126, 0.16);
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255, 84, 0, 0.08), transparent 26%),
+                radial-gradient(circle at 86% 14%, rgba(30, 78, 216, 0.12), transparent 24%),
+                linear-gradient(180deg, rgba(27, 32, 39, 0.96), rgba(18, 24, 31, 0.98));
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+        }
+
+        .app-strip::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.06;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.9) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.9) 1px, transparent 1px);
+            background-size: 52px 52px;
+            mask-image: radial-gradient(circle at center, #000, transparent 82%);
+        }
+
+        .app-strip > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .app-strip .app-band-kicker {
+            color: rgba(229, 190, 178, 0.74);
+        }
+
+        .app-strip .app-band-title {
+            color: #dee2ec;
+        }
+
+        .app-strip .app-band-copy {
+            color: rgba(222, 226, 236, 0.74);
+        }
+
+        .store-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 8px;
+            border-radius: 16px;
+            border: 1px solid rgba(229, 190, 178, 0.14);
+            background: rgba(9, 15, 21, 0.5);
+            backdrop-filter: blur(10px);
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+        }
+
+        .store-link:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 181, 156, 0.24);
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+        }
+
+        .store-link img {
+            display: block;
+            width: auto;
+            height: 48px;
+        }
+
+        @media (max-width: 640px) {
+            .store-link {
+                padding: 5px 7px;
+                border-radius: 14px;
+            }
+
+            .store-link img {
+                height: 44px;
+            }
+        }
+
+        .site-footer {
+            background:
+                linear-gradient(180deg, rgba(9, 15, 21, 0.92), rgba(9, 15, 21, 1)),
+                url("./assets/tech-connections-bg.svg") center / cover no-repeat;
+            border-top: 1px solid rgba(172, 137, 126, 0.16);
+        }
+
+        .footer-link {
+            color: #e5beb2;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: #ffb59c;
+            transform: translateX(2px);
+        }
+
+        @media (max-width: 767px) {
+            .form-shell,
+            .contact-info-card {
+                border-radius: 22px;
+            }
+
+            .store-link img {
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface bg-background loader-active" aria-busy="true">
+<div class="site-loader" aria-hidden="true">
+<div class="site-loader__stage">
+<img class="site-loader__media" src="./gif.gif" alt="" width="1080" height="1350" />
+</div>
+</div>
+<nav class="nav-shell fixed top-0 left-0 right-0 z-50">
+<div class="max-w-7xl mx-auto px-gutter py-4 flex items-center justify-between gap-md">
+<a class="flex items-center gap-3 min-w-0" href="./index.html">
+<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="./ip2_logo_simbolo_transparente_1x1_clean.png"/>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">IP2 INTERNET</span>
+</a>
+<div class="flex items-center gap-sm">
+<a class="hidden sm:inline-flex cta-secondary" href="./index.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+Ver planos
+</a>
+<a class="cta-primary glow-orange" href="https://www.ip2internet.com.br/meta//redirect.html">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+Planos
+</a>
+</div>
+</div>
+</nav>
+
+<main>
+<section class="connection-bg pt-[118px] pb-xl">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-xl items-start">
+<div class="space-y-lg">
+<span class="support-chip">
+<span class="material-symbols-outlined text-[16px]">target</span>
+Atendimento IP2
+</span>
+<div class="space-y-md">
+<div class="flex items-center gap-3">
+<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="./ip2_logo_simbolo_transparente_1x1_clean.png"/>
+<span class="font-label-md text-label-md text-brand-orange uppercase tracking-[0.18em]">Contato IP2</span>
+</div>
+<h1 class="font-headline-lg text-[clamp(2.6rem,5vw,4.8rem)] leading-[0.95] tracking-tight text-on-surface">Solicite atendimento da nossa equipe</h1>
+<div class="tech-line w-28"></div>
+<p class="max-w-xl font-body-md text-body-md text-on-surface-variant">Preencha seus dados para falar com a IP2 INTERNET sobre novos planos, suporte, cobertura, instala&ccedil;&atilde;o ou atendimento empresarial.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<article class="contact-info-card space-y-sm">
+<span class="contact-info-icon">
+<span class="material-symbols-outlined">call</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Telefone</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Fale com nossa equipe pelos canais oficiais da IP2.</p>
+<a class="footer-link inline-flex items-center gap-2 font-label-md text-label-md" href="tel:+558540420052">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+(85) 4042-0052
+</a>
+</article>
+
+<article class="contact-info-card space-y-sm">
+<span class="contact-info-icon">
+<span class="material-symbols-outlined">mail</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">E-mails de atendimento</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Escolha o canal mais adequado para agilizar seu atendimento.</p>
+<div class="space-y-xs font-body-sm text-body-sm text-on-surface">
+<a class="footer-link block" href="mailto:comercial@grupoip2.com.br">comercial@grupoip2.com.br</a>
+<a class="footer-link block" href="mailto:suporte@grupoip2.com.br">suporte@grupoip2.com.br</a>
+<a class="footer-link block" href="mailto:financeiro@grupoip2.com.br">financeiro@grupoip2.com.br</a>
+</div>
+</article>
+<div class="sm:col-span-2 rounded-3xl border border-outline-variant/20 bg-surface-container/70 px-md py-md">
+<p class="helper-note">Informe seus dados corretamente para que nossa equipe consiga retornar o mais r&aacute;pido poss&iacute;vel.</p>
+</div>
+</div>
+</div>
+
+<div class="space-y-md">
+<div class="form-shell">
+<div class="flex items-center gap-3 mb-sm">
+<img alt="Logo IP2 Internet" class="brand-logo h-10 w-10" src="./ip2_logo_simbolo_transparente_1x1_clean.png"/>
+<span class="font-label-md text-label-md text-brand-orange uppercase tracking-[0.18em]">Fale com a gente</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Formul&aacute;rio de contato</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs mb-lg">Preencha o formul&aacute;rio e nossa equipe entrar&aacute; em contato para dar continuidade ao seu atendimento.</p>
+
+<form id="lead-form" action="https://formsubmit.co/comercial@grupoip2.com.br" class="space-y-md" method="POST" novalidate>
+<input name="utm_source" type="hidden"/>
+<input name="utm_medium" type="hidden"/>
+<input name="utm_campaign" type="hidden"/>
+<input name="utm_term" type="hidden"/>
+<input name="utm_content" type="hidden"/>
+<input name="gclid" type="hidden"/>
+<input name="fbclid" type="hidden"/>
+<input name="captured_at" type="hidden"/>
+<input name="page_url" type="hidden"/>
+<input name="page_path" type="hidden"/>
+<input id="lead-next" name="_next" type="hidden"/>
+<input name="_subject" type="hidden" value="Novo lead - IP2 INTERNET"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_honey" style="display:none" tabindex="-1" type="text"/>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="field-label" for="lead-name">Nome completo *</label>
+<input class="field-control" id="lead-name" name="nome" placeholder="Seu nome" required type="text"/>
+</div>
+<div>
+<label class="field-label" for="lead-whatsapp">WhatsApp *</label>
+<input class="field-control" id="lead-whatsapp" inputmode="numeric" name="whatsapp" placeholder="(85) 99999-9999" required type="tel"/>
+</div>
+<div>
+<label class="field-label" for="lead-email">E-mail *</label>
+<input class="field-control" id="lead-email" name="email" placeholder="voce@empresa.com" required type="email"/>
+</div>
+<div>
+<label class="field-label" for="lead-profile">Perfil *</label>
+<select class="field-select" id="lead-profile" name="perfil" required>
+<option value="">Selecione</option>
+<option value="residencial">Residencial</option>
+<option value="empresarial">Empresas</option>
+</select>
+</div>
+<div>
+<label class="field-label" for="lead-interest">Plano de interesse *</label>
+<select class="field-select" id="lead-interest" name="plano_interesse" required>
+<option value="">Selecione</option>
+<option value="hiper-fibra-500">Hiper Fibra 500 Mbps</option>
+<option value="hiper-fibra-700">Hiper Fibra 700 Mbps</option>
+<option value="combo-max-700">Combo Max 700 Mbps</option>
+<option value="combo-cam-700">Combo Cam 700 Mbps</option>
+<option value="pme-fibra-300">PME Fibra 300 Mbps</option>
+<option value="pme-fibra-500">PME Fibra 500 Mbps</option>
+<option value="pme-fibra-600">PME Fibra 600 Mbps</option>
+<option value="pme-fibra-700-ip-fixo">PME Fibra 700 + IP Fixo</option>
+<option value="outro">Outro assunto</option>
+</select>
+</div>
+<div>
+<label class="field-label" for="lead-region">Bairro ou regi&atilde;o *</label>
+<input class="field-control" id="lead-region" name="regiao" placeholder="Ex.: Lagoa Redonda" required type="text"/>
+</div>
+</div>
+
+<div>
+<label class="field-label" for="lead-message">Mensagem</label>
+<textarea class="field-textarea" id="lead-message" name="mensagem" placeholder="Conte para nossa equipe como podemos ajudar: novo plano, cobertura, instala&ccedil;&atilde;o, suporte ou atendimento para empresa."></textarea>
+</div>
+
+<label class="consent-row" for="lead-consent">
+<input id="lead-consent" name="consentimento" required type="checkbox" value="aceito"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Autorizo o contato da IP2 INTERNET para retorno sobre minha solicita&ccedil;&atilde;o.</span>
+</label>
+
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-md pt-xs">
+<p class="helper-note">Ao enviar, sua solicita&ccedil;&atilde;o segue diretamente para o e-mail da nossa equipe comercial.</p>
+<button class="cta-primary" id="lead-submit" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+Enviar solicita&ccedil;&atilde;o
+</button>
+</div>
+<p aria-live="polite" class="status-banner" id="lead-form-status"></p>
+</form>
+</div>
+<article class="contact-info-card space-y-sm">
+<span class="contact-info-icon">
+<span class="material-symbols-outlined">location_on</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Base de atendimento</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Av. Luiz Evangelista, 331, Lagoa Redonda, Fortaleza, CE. Nossa equipe est&aacute; pronta para orientar voc&ecirc; sobre disponibilidade, planos e suporte.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-5xl mx-auto px-gutter">
+<div class="app-strip rounded-[28px] px-lg py-lg text-center">
+<span class="app-band-kicker font-label-sm text-label-sm uppercase tracking-[0.24em]">Acesso a faturas e chamados</span>
+<h2 class="app-band-title font-headline-lg text-headline-lg mt-sm">Baixe Nosso App Nas Lojas</h2>
+<p class="app-band-copy font-body-md text-body-md max-w-2xl mx-auto mt-sm">Use o app <strong>IP2 SAC</strong> para segunda via, abertura de chamados, atualiza&ccedil;&atilde;o de boleto, diagn&oacute;stico de conex&atilde;o e avisos do servi&ccedil;o.</p>
+<div class="flex flex-wrap items-center justify-center gap-md mt-lg">
+<a class="store-link" href="https://apps.apple.com/br/app/ip2-sac/id1606812873" rel="noopener noreferrer" target="_blank">
+<img alt="Baixar IP2 SAC na App Store" src="./app-store-badge.svg"/>
+</a>
+<a class="store-link" href="https://play.google.com/store/apps/details?hl=pt_BR&amp;id=br.com.grupoip2.sac" rel="noopener noreferrer" target="_blank">
+<img alt="Baixar IP2 SAC no Google Play" src="./google-play-badge.svg"/>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer py-lg">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr] gap-lg items-start">
+<div class="space-y-sm">
+<div class="flex items-center gap-3">
+<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="./ip2_logo_simbolo_transparente_1x1_clean.png"/>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">IP2 INTERNET</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Internet de fibra com atendimento para planos residenciais, empresariais, suporte e servi&ccedil;os digitais.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Grupo IP2 2026. Todos os direitos reservados.</p>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-md">Atalhos</h3>
+<nav class="grid grid-cols-1 gap-sm">
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="./index.html"><span class="material-symbols-outlined text-[18px]">home</span>Ver planos</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://www.ip2internet.com.br/central-do-assinante/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">account_circle</span>Central do assinante</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://www.ip2internet.com.br/portal-apps/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">apps</span>Portal de aplicativos</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://openspeedtest.grupoip2.com.br/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">speed</span>Teste de velocidade</a>
+</nav>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-md">Contato oficial</h3>
+<div class="grid gap-sm font-body-sm text-body-sm text-on-surface-variant">
+<a class="footer-link inline-flex items-center gap-2" href="mailto:comercial@grupoip2.com.br"><span class="material-symbols-outlined text-[18px]">alternate_email</span>comercial@grupoip2.com.br</a>
+<a class="footer-link inline-flex items-center gap-2" href="mailto:suporte@grupoip2.com.br"><span class="material-symbols-outlined text-[18px]">support_agent</span>suporte@grupoip2.com.br</a>
+<a class="footer-link inline-flex items-center gap-2" href="tel:+558540420052"><span class="material-symbols-outlined text-[18px]">call</span>(85) 4042-0052</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+        const leadForm = document.getElementById("lead-form");
+        const leadStatus = document.getElementById("lead-form-status");
+        const leadSubmit = document.getElementById("lead-submit");
+        const leadNext = document.getElementById("lead-next");
+        const whatsappField = document.getElementById("lead-whatsapp");
+        const trackingFieldNames = [
+            "utm_source",
+            "utm_medium",
+            "utm_campaign",
+            "utm_term",
+            "utm_content",
+            "gclid",
+            "fbclid"
+        ];
+
+        const setLeadStatus = (type, message) => {
+            leadStatus.textContent = message;
+            leadStatus.className = `status-banner is-visible ${type}`;
+        };
+
+        const syncPageMetadata = () => {
+            const params = new URLSearchParams(window.location.search);
+
+            trackingFieldNames.forEach(name => {
+                const field = leadForm.elements[name];
+                if (field) {
+                    field.value = params.get(name) || "";
+                }
+            });
+
+            leadForm.elements.captured_at.value = new Date().toISOString();
+            leadForm.elements.page_url.value = window.location.href;
+            leadForm.elements.page_path.value = window.location.pathname;
+            leadNext.value = `${window.location.origin}${window.location.pathname}?status=sucesso`;
+
+            if (params.get("status") === "sucesso") {
+                setLeadStatus("success", "Recebemos sua solicitação com sucesso. Em breve nossa equipe entrará em contato.");
+            }
+        };
+
+        const formatWhatsapp = value => {
+            const digits = value.replace(/\D/g, "").slice(0, 11);
+
+            if (digits.length <= 2) {
+                return digits;
+            }
+
+            if (digits.length <= 7) {
+                return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+            }
+
+            if (digits.length <= 10) {
+                return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+            }
+
+            return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+        };
+
+        whatsappField.addEventListener("input", event => {
+            event.target.value = formatWhatsapp(event.target.value);
+        });
+
+        syncPageMetadata();
+
+        leadForm.addEventListener("submit", event => {
+            if (!leadForm.reportValidity()) {
+                event.preventDefault();
+                setLeadStatus("error", "Revise os campos obrigatórios e tente novamente.");
+                return;
+            }
+
+            leadSubmit.disabled = true;
+            leadSubmit.innerHTML = '<span class="material-symbols-outlined text-[18px]">hourglass_top</span>Enviando';
+        });
+    </script>
+</body>
+</html>
