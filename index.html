@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>IP2 Internet</title>
+<link href="./favicon.ico" rel="icon" type="image/x-icon"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -1169,7 +1170,7 @@
             width: 58px;
             height: 58px;
             border-radius: 14px;
-            background: #ffffff;
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1179,9 +1180,11 @@
         }
 
         .app-logo-box img {
-            width: 42px;
-            height: 42px;
-            object-fit: contain;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            object-fit: cover;
         }
 
         .app-kind {
@@ -1726,19 +1729,19 @@ Contratar Online
 </summary>
 <div class="apps-tier-content grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-sm">
 <div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Filmes e series</span><div class="app-logo-box"><img loading="lazy" alt="Looke" src="https://play-lh.googleusercontent.com/L0OdrUKFoSwg2Y1vy281HUFE_nz4I1Lf4O6W25WViIvfOXBkVjOVcc1PxlE_Q9sEVTrXF78P30liJAqbWj_-XA"/></div><strong class="app-name">Looke</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Educacao</span><div class="app-logo-box"><img loading="lazy" alt="Estuda+" src="https://play-lh.googleusercontent.com/L1S-qmUfyWkPBZMd0DVxrFpkKAkA2jphV9rJYm04Fqsn4cJPFpGOSJi5n1fH_6nWOHWDiA3mC5HeH1oOR-nu"/></div><strong class="app-name">Estuda+</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Clube</span><div class="app-logo-box"><img loading="lazy" alt="HUB Vantagens" src="https://play-lh.googleusercontent.com/ehfKPVpQSKCPO0O4iluTmmX6yktCvGq55wgduAlfNgJcFsefK2yx7SOB-eAONnnoc8jC0mOwECePxC_kboRS0g"/></div><strong class="app-name">HUB Vantagens</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">TV</span><div class="app-logo-box"><img loading="lazy" alt="SKY+ Light" src="https://play-lh.googleusercontent.com/2jyy-Opji-i9fxeIQH_47mHOBZV9sCNMDuzjjB6bI03pQ3TRSl2rFPHfCv3QD02KlSf9VIhJmrKGcgl-PRwn3g"/></div><strong class="app-name">SKY+ Light</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Games</span><div class="app-logo-box"><img loading="lazy" alt="NoPing" src="https://play-lh.googleusercontent.com/ueiUG_0KAVvGjak8DOMoop-anoLHmHdfXkh166_27S4wmfqZi036I0iGUMRpyth_pY9Cp4V14cA4oD67StGY"/></div><strong class="app-name">NoPing</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Antivirus</span><div class="app-logo-box"><img loading="lazy" alt="Kaspersky" src="https://www.google.com/s2/favicons?domain_url=https://www.kaspersky.com&sz=128"/></div><strong class="app-name">Kaspersky 1 Licenca</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Musica</span><div class="app-logo-box"><img loading="lazy" alt="Playlist" src="https://www.google.com/s2/favicons?domain_url=https://www.playlistapp.com.br&sz=128"/></div><strong class="app-name">Playlist</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Educacao</span><div class="app-logo-box"><img loading="lazy" alt="Estuda+" src="./assets/app-icons/estuda-plus.png"/></div><strong class="app-name">Estuda+</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Clube</span><div class="app-logo-box"><img loading="lazy" alt="HUB Vantagens" src="./assets/app-icons/hub-vantagens.png"/></div><strong class="app-name">HUB Vantagens</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">TV</span><div class="app-logo-box"><img loading="lazy" alt="SKY+ Light" src="./assets/app-icons/sky-plus.png"/></div><strong class="app-name">SKY+ Light</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Games</span><div class="app-logo-box"><img loading="lazy" alt="ExitLag" src="./assets/app-icons/exitlag.png"/></div><strong class="app-name">ExitLag</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Antivirus</span><div class="app-logo-box"><img loading="lazy" alt="Kaspersky" src="./assets/app-icons/kaspersky.png"/></div><strong class="app-name">Kaspersky 1 Licenca</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Musica</span><div class="app-logo-box"><img loading="lazy" alt="Playlist" src="./assets/app-icons/playlist.png"/></div><strong class="app-name">Playlist</strong></div>
 <div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Infantil</span><div class="app-logo-box"><img loading="lazy" alt="PlayKids" src="https://play-lh.googleusercontent.com/yw6G9ax1kbxr-H9KBAM6RLSGvx7Fd_HTfS7iFaOWQaIDyUXwgxvu5VN74Mt53O836J1g8oKlL2OSd5VcwJaLJt0"/></div><strong class="app-name">PlayKids</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Infantil</span><div class="app-logo-box"><img loading="lazy" alt="Pequenos Leitores" src="https://play-lh.googleusercontent.com/HhJMW2O-OR13JQTTH4Dehewt0GCzrxcBXubM8-jgKln1FBbn5vLxLatsiJ5-t9apUkgTFGmTf0kP6Sn3xnmTyg"/></div><strong class="app-name">Pequenos Leitores</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Saude</span><div class="app-logo-box"><img loading="lazy" alt="+QNutri" src="https://www.google.com/s2/favicons?domain_url=https://play.queimadiaria.com&sz=128"/></div><strong class="app-name">+QNutri</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Bem-estar</span><div class="app-logo-box"><img loading="lazy" alt="Fluid" src="https://play-lh.googleusercontent.com/mKeYwc8o-oYuTVN537bDBADagxHvBm9Z5MADA8YwFV13MCJsXgsSc5xiwWVoa7KKn2ckhDhirAtBKskl7WXn"/></div><strong class="app-name">Fluid</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Leitura</span><div class="app-logo-box"><img loading="lazy" alt="HUB Revistas" src="https://www.google.com/s2/favicons?domain_url=https://www.hubeapp.com.br&sz=128"/></div><strong class="app-name">HUB Revistas</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Leitura</span><div class="app-logo-box"><img loading="lazy" alt="Social Comics" src="https://play-lh.googleusercontent.com/wojO9Gn6QliDp3vyEh154hgXmpJe7m28EBI44wp_jxnIEoBiP4igc69ZoCYGeXhYt9qewWnKGEpojddJhtwWgFk"/></div><strong class="app-name">Social Comics</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Leitura</span><div class="app-logo-box"><img loading="lazy" alt="Ubook" src="https://www.google.com/s2/favicons?domain_url=https://www.ubook.com&sz=128"/></div><strong class="app-name">Ubook</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Infantil</span><div class="app-logo-box"><img loading="lazy" alt="Pequenos Leitores" src="./assets/app-icons/pequenos-leitores.png"/></div><strong class="app-name">Pequenos Leitores</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Saude</span><div class="app-logo-box"><img loading="lazy" alt="+QNutri" src="./assets/app-icons/qnutri.png"/></div><strong class="app-name">+QNutri</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Bem-estar</span><div class="app-logo-box"><img loading="lazy" alt="Fluid" src="./assets/app-icons/fluid.png"/></div><strong class="app-name">Fluid</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Leitura</span><div class="app-logo-box"><img loading="lazy" alt="HUB Revistas" src="./assets/app-icons/hub-revistas.png"/></div><strong class="app-name">HUB Revistas</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Leitura</span><div class="app-logo-box"><img loading="lazy" alt="Social Comics" src="./assets/app-icons/social-comics.png"/></div><strong class="app-name">Social Comics</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Leitura</span><div class="app-logo-box"><img loading="lazy" alt="Ubook" src="./assets/app-icons/ubook.png"/></div><strong class="app-name">Ubook</strong></div>
 </div>
 </details>
 <details class="apps-tier apps-tier-advanced rounded-2xl p-md">
@@ -1750,13 +1753,13 @@ Contratar Online
 <span class="apps-summary-icon material-symbols-outlined text-brand-orange">expand_more</span>
 </summary>
 <div class="apps-tier-content grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-sm">
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">TV</span><div class="app-logo-box"><img loading="lazy" alt="SKY+ Light + Globo" src="https://play-lh.googleusercontent.com/fJMMX4h3xa1nIiJYO4jF0M3YWzBhQk3sRW7ra1L5L1z7LJINnXfaz6ZPZcQdq1__8NfTzpjy0jZbDS0QrbL86w"/></div><strong class="app-name">SKY+ Light + Globo</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Musica</span><div class="app-logo-box"><img loading="lazy" alt="Deezer" src="https://play-lh.googleusercontent.com/RFBXn4V0H8Zmi3_jViu73GTpQOmGmrvG7mdM1ynStAAYEd2aOLo5G0v9AHSUMwia1lQGI-c5oXMzZJCq0RMlJA"/></div><strong class="app-name">Deezer</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Filmes e series</span><div class="app-logo-box"><img loading="lazy" alt="Curta On" src="https://www.google.com/s2/favicons?domain_url=https://curtaon.com.br&sz=128"/></div><strong class="app-name">Curta On</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Noticias</span><div class="app-logo-box"><img loading="lazy" alt="O Jornalista" src="https://play-lh.googleusercontent.com/RQzILprzz9UngJTuWUbXTQyEicC8eJcSU9D3obdr7wN_WIINH6szMgeieMj0NiZ5s8017xY57z4pQSpIcxEFuVk"/></div><strong class="app-name">O Jornalista</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Adulto</span><div class="app-logo-box"><img loading="lazy" alt="HotGo" src="https://www.google.com/s2/favicons?domain_url=https://www.hotgo.tv&sz=128"/></div><strong class="app-name">HotGo</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Telemedicina</span><div class="app-logo-box"><img loading="lazy" alt="Docway" src="https://play-lh.googleusercontent.com/nj_0wGlVTSrCiTOiiKWFgIokCVrln34cxbePawVknlnRsK8_IZz7C_Px1hT010maTtwhXeKUf-lDYUFKmQFyMA"/></div><strong class="app-name">Docway</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Antivirus</span><div class="app-logo-box"><img loading="lazy" alt="Kaspersky" src="https://www.google.com/s2/favicons?domain_url=https://www.kaspersky.com&sz=128"/></div><strong class="app-name">Kaspersky 3 Licencas</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">TV</span><div class="app-logo-box"><img loading="lazy" alt="SKY+ Light + Globo" src="./assets/app-icons/sky-plus.png"/></div><strong class="app-name">SKY+ Light + Globo</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Musica</span><div class="app-logo-box"><img loading="lazy" alt="Deezer" src="./assets/app-icons/deezer.png"/></div><strong class="app-name">Deezer</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Filmes e series</span><div class="app-logo-box"><img loading="lazy" alt="Curta On" src="./assets/app-icons/curta-on.png"/></div><strong class="app-name">Curta On</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Noticias</span><div class="app-logo-box"><img loading="lazy" alt="O Jornalista" src="./assets/app-icons/o-jornalista.png"/></div><strong class="app-name">O Jornalista</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Adulto</span><div class="app-logo-box"><img loading="lazy" alt="HotGo" src="./assets/app-icons/hotgo.png"/></div><strong class="app-name">HotGo</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Telemedicina</span><div class="app-logo-box"><img loading="lazy" alt="Docway" src="./assets/app-icons/docway.png"/></div><strong class="app-name">Docway</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Antivirus</span><div class="app-logo-box"><img loading="lazy" alt="Kaspersky" src="./assets/app-icons/kaspersky.png"/></div><strong class="app-name">Kaspersky 3 Licencas</strong></div>
 </div>
 </details>
 <details class="apps-tier apps-tier-premium rounded-2xl p-md">
@@ -1768,11 +1771,11 @@ Contratar Online
 <span class="apps-summary-icon material-symbols-outlined text-[#A78BFA]">expand_more</span>
 </summary>
 <div class="apps-tier-content grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-sm">
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Filmes e series</span><div class="app-logo-box"><img loading="lazy" alt="HBO Max" src="https://play-lh.googleusercontent.com/wKJ5hN5CmSBWXPBVYYuRENzcEVb7FB6NyibjKqPT4SB0eoZ7Fww2jq-OhUDCxEPGALrSekQaazrHLSBwVb6T4A"/></div><strong class="app-name">Max</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Conhecimento</span><div class="app-logo-box"><img loading="lazy" alt="SmartContent" src="https://play-lh.googleusercontent.com/qliTfP3pdPwaZIPuX0_0u2cGmkbhk0ycjZqceo9ICqvhWTZXD6CgPoOV3o4DEdAQTMT59qDM3V0JHWR8hBMGa_M"/></div><strong class="app-name">SmartContent</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Esporte</span><div class="app-logo-box"><img loading="lazy" alt="NBA" src="https://play-lh.googleusercontent.com/7XOkKce3M81tCiWdcOYd1U59bhBtN81bv_eH7QLhFIYqA7n4PlDaYvrhAbAfpAU0DHFnAvaT7RhIsmtQwUFAJFg"/></div><strong class="app-name">NBA</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Antivirus</span><div class="app-logo-box"><img loading="lazy" alt="Kaspersky" src="https://www.google.com/s2/favicons?domain_url=https://www.kaspersky.com&sz=128"/></div><strong class="app-name">Kaspersky 5 Licencas</strong></div>
-<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Saude</span><div class="app-logo-box"><img loading="lazy" alt="Zen App" src="https://play-lh.googleusercontent.com/ij-79lzzzwjE1LKtzrmMoE7-b5OoICOYShdrgPwYDHZCLuy4I5jU8LNWLwRkPv_L9fMPVdURAUKc9YtbDMwN3A"/></div><strong class="app-name">Zen App</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Filmes e series</span><div class="app-logo-box"><img loading="lazy" alt="HBO Max" src="./assets/app-icons/hbo-max.png"/></div><strong class="app-name">Max</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Conhecimento</span><div class="app-logo-box"><img loading="lazy" alt="SmartContent" src="./assets/app-icons/smartcontent.png"/></div><strong class="app-name">SmartContent</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Filmes e series</span><div class="app-logo-box"><img loading="lazy" alt="Disney+" src="./assets/app-icons/disney-plus.png"/></div><strong class="app-name">Disney+</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Antivirus</span><div class="app-logo-box"><img loading="lazy" alt="Kaspersky" src="./assets/app-icons/kaspersky.png"/></div><strong class="app-name">Kaspersky 5 Licencas</strong></div>
+<div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Saude</span><div class="app-logo-box"><img loading="lazy" alt="Zen App" src="./assets/app-icons/zen.png"/></div><strong class="app-name">Zen App</strong></div>
 <div class="app-item rounded-xl flex flex-col gap-xs"><span class="app-kind">Bem-estar</span><div class="app-logo-box"><img loading="lazy" alt="Queima Diaria" src="https://play-lh.googleusercontent.com/1GnSsVt0oBGkodkTIXnyC_5rtBuLGzDiF-luqPSjIUWdTe93dBuCURbxNkDOSjZNhHJcyPlvY0k1H4cgZRzQGw"/></div><strong class="app-name">Queima diaria</strong></div>
 </div>
 </details>
@@ -1841,10 +1844,10 @@ Contratar Online
 <p class="app-band-copy font-body-md text-body-md max-w-2xl mx-auto mt-sm">Use o app <strong>IP2 SAC</strong> para segunda via, abertura de chamados, atualiza&ccedil;&atilde;o de boleto, diagn&oacute;stico de conex&atilde;o e avisos do servi&ccedil;o.</p>
 <div class="flex flex-wrap items-center justify-center gap-md mt-lg">
 <a class="store-link" href="https://apps.apple.com/br/app/ip2-sac/id1606812873" target="_blank" rel="noopener noreferrer">
-<img alt="Baixar IP2 SAC na App Store" src="./app-store-badge.svg"/>
+<img alt="Baixar IP2 SAC na App Store" src="./assets/store-badges/apple-200x59.png"/>
 </a>
 <a class="store-link" href="https://play.google.com/store/apps/details?hl=pt_BR&amp;id=br.com.grupoip2.sac" target="_blank" rel="noopener noreferrer">
-<img alt="Baixar IP2 SAC no Google Play" src="./google-play-badge.svg"/>
+<img alt="Baixar IP2 SAC no Google Play" src="./assets/store-badges/google-200x59.png"/>
 </a>
 </div>
 </div>
@@ -1861,16 +1864,16 @@ Contratar Online
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Internet de fibra com planos para casa, aplicativos inclusos e suporte para manter sua conexao sempre em movimento.</p>
 <br>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Grupo IP2 2026. Todos os direitos reservados.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">IP2 Internet 2026. Todos os direitos reservados.</p>
 </div>
 <div>
 <h3 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-md">Links uteis</h3>
 <nav class="grid grid-cols-1 gap-sm" aria-label="Links do rodape">
 <a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="./politicadeprivacidade.html"><span class="material-symbols-outlined text-[18px]">policy</span>Politica de privacidade</a>
-<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://www.ip2internet.com.br/portal-apps/" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-[18px]">apps</span>Portal de aplicativos</a>
-<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://www.ip2internet.com.br/manual-apps/" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-[18px]">menu_book</span>Manual de aplicativos</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://www.portaldoassinante.com/ip2internet/login" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-[18px]">apps</span>Portal de aplicativos</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://comologar.com.br/" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-[18px]">menu_book</span>Manual de aplicativos</a>
 <a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://openspeedtest.grupoip2.com.br/" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-[18px]">speed</span>Teste de velocidade</a>
-<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://www.ip2internet.com.br/central-do-assinante/" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-[18px]">account_circle</span>Central do assinante</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://sac.grupoip2.com.br" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-[18px]">account_circle</span>Central do assinante</a>
 <a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="./contato.html"><span class="material-symbols-outlined text-[18px]">support_agent</span>Contato</a>
 
 </nav>
