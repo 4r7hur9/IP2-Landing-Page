@@ -9,22 +9,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="./loader.css" rel="stylesheet"/>
-<link href="./gif.gif" rel="preload" as="image" type="image/gif"/>
-<noscript>
-<style>
-        body.loader-active {
-            overflow: auto !important;
-            overflow-x: hidden !important;
-            overflow-y: auto !important;
-            touch-action: auto !important;
-        }
-
-        body.loader-active > .site-loader {
-            display: none !important;
-        }
-</style>
-</noscript>
 <script>
         tailwind.config = {
             darkMode: "class",
@@ -71,7 +55,20 @@
             }
         };
     </script>
-<script defer src="./loader.js"></script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1955246271821508');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 <style>
         :root {
             color-scheme: dark;
@@ -419,12 +416,10 @@
         }
     </style>
 </head>
-<body class="font-body-md text-on-surface bg-background loader-active" aria-busy="true">
-<div class="site-loader" aria-hidden="true">
-<div class="site-loader__stage">
-<img class="site-loader__media" src="./gif.gif" alt="" width="1080" height="1350" />
-</div>
-</div>
+<body class="font-body-md text-on-surface bg-background">
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1955246271821508&ev=PageView&noscript=1"
+/></noscript>
 <nav class="nav-shell fixed top-0 left-0 right-0 z-50">
 <div class="max-w-7xl mx-auto px-gutter py-4 flex items-center justify-between gap-md">
 <a class="flex items-center gap-3 min-w-0" href="./index.html">
@@ -573,10 +568,10 @@ Enviar mensagem
 <h2 class="app-band-title font-headline-lg text-headline-lg mt-sm">Baixe Nosso App Nas Lojas</h2>
 <p class="app-band-copy font-body-md text-body-md max-w-2xl mx-auto mt-sm">Use o app <strong>IP2 SAC</strong> para segunda via, abertura de chamados, atualizacao de boleto, diagnostico de conexao e avisos do servico.</p>
 <div class="flex flex-wrap items-center justify-center gap-md mt-lg">
-<a class="store-link" href="https://apps.apple.com/br/app/ip2-sac/id1606812873" rel="noopener noreferrer" target="_blank">
+<a class="store-link" href="https://www.ip2internet.com.br/meta/redirect.html" rel="noopener noreferrer" target="_blank">
 <img alt="Baixar IP2 SAC na App Store" src="./assets/store-badges/apple-200x59.png"/>
 </a>
-<a class="store-link" href="https://play.google.com/store/apps/details?hl=pt_BR&amp;id=br.com.grupoip2.sac" rel="noopener noreferrer" target="_blank">
+<a class="store-link" href="https://www.ip2internet.com.br/meta/redirect.html" rel="noopener noreferrer" target="_blank">
 <img alt="Baixar IP2 SAC no Google Play" src="./assets/store-badges/google-200x59.png"/>
 </a>
 </div>
@@ -594,7 +589,7 @@ Enviar mensagem
 <span class="font-headline-sm text-headline-sm text-on-surface font-bold">IP2 INTERNET</span>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Internet de fibra com atendimento para planos residenciais, empresariais, suporte e servicos digitais.</p>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Grupo IP2 2026. Todos os direitos reservados.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">IP2 Internet 2026. Todos os direitos reservados.</p>
 </div>
 <div>
 <h3 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-md">Atalhos</h3>
