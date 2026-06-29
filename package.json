@@ -9,6 +9,7 @@
     "dev:server": "node --watch --env-file-if-exists=.env server.js",
     "dev:styles": "npx @tailwindcss/cli -i ./assets/styles/app.css -o ./assets/styles/site.css --watch",
     "generate:password-hash": "node ./scripts/generate-password-hash.js",
+    "prestart": "npm run build",
     "prisma:generate": "npx prisma generate",
     "prisma:migrate:dev": "npx prisma migrate dev",
     "prisma:studio": "npx prisma studio",

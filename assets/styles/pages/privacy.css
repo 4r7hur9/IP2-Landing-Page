@@ -1,3 +1,346 @@
-/*
- * Estilos especificos da pagina de privacidade.
- */
+/* Estilos especificos da politica de privacidade. */
+
+:root {
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100dvh;
+            background:
+                radial-gradient(circle at 12% 18%, rgba(30, 78, 216, 0.18), transparent 26%),
+                radial-gradient(circle at 88% 16%, rgba(255, 84, 0, 0.16), transparent 22%),
+                linear-gradient(180deg, #0b1016 0%, #0f141a 42%, #090f15 100%);
+            color: #dee2ec;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .connection-bg {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 18% 24%, rgba(30, 78, 216, 0.22), transparent 32%),
+                radial-gradient(circle at 78% 18%, rgba(255, 84, 0, 0.18), transparent 30%),
+                linear-gradient(180deg, rgba(15, 20, 26, 0.72), rgba(15, 20, 26, 0.94)),
+                url("/assets/images/backgrounds/tech-connections-bg.svg") center / cover no-repeat;
+        }
+
+        .connection-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(90deg, rgba(15, 20, 26, 0.94) 0%, rgba(15, 20, 26, 0.58) 48%, rgba(15, 20, 26, 0.76) 100%),
+                radial-gradient(circle at center, transparent 0, rgba(15, 20, 26, 0.16) 44%, rgba(15, 20, 26, 0.84) 100%);
+        }
+
+        .connection-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.38;
+            background-image:
+                linear-gradient(rgba(222, 226, 236, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(222, 226, 236, 0.05) 1px, transparent 1px);
+            background-size: 44px 44px;
+            mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+        }
+
+        .connection-bg > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-logo {
+            object-fit: contain;
+            filter: drop-shadow(0 0 14px rgba(255, 84, 0, 0.28));
+        }
+
+        .glow-orange {
+            box-shadow: 0 0 22px rgba(255, 84, 0, 0.28);
+        }
+
+        .nav-shell {
+            background: rgba(9, 15, 21, 0.8);
+            border-bottom: 1px solid rgba(172, 137, 126, 0.2);
+            backdrop-filter: blur(14px);
+        }
+
+        .tech-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 181, 156, 0.36), transparent);
+        }
+
+        .cta-primary,
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 999px;
+            padding: 14px 22px;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 13px;
+            line-height: 15px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease;
+        }
+
+        .cta-primary {
+            border: 1px solid transparent;
+            background: #ff5400;
+            color: #ffffff;
+            box-shadow: 0 0 22px rgba(255, 84, 0, 0.24);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            background: #ff6b24;
+        }
+
+        .cta-secondary {
+            border: 1px solid rgba(172, 137, 126, 0.22);
+            background: rgba(15, 20, 26, 0.62);
+            color: #dee2ec;
+        }
+
+        .cta-secondary:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 181, 156, 0.34);
+            color: #ffb59c;
+        }
+
+        .policy-shell,
+        .policy-meta-card,
+        .policy-contact-card {
+            border: 1px solid rgba(172, 137, 126, 0.22);
+            background:
+                radial-gradient(circle at 88% 0%, rgba(30, 78, 216, 0.12), transparent 28%),
+                rgba(26, 31, 38, 0.82);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+        }
+
+        .policy-shell {
+            border-radius: 28px;
+            padding: 28px;
+        }
+
+        .policy-meta-card,
+        .policy-contact-card {
+            border-radius: 24px;
+            padding: 22px;
+        }
+
+        .policy-meta-card {
+            position: sticky;
+            top: 108px;
+        }
+
+        .policy-section + .policy-section {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(172, 137, 126, 0.16);
+        }
+
+        .policy-title {
+            margin: 0 0 12px;
+            color: #dee2ec;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 28px;
+            line-height: 34px;
+            font-weight: 600;
+        }
+
+        .policy-copy {
+            margin: 0;
+            color: rgba(222, 226, 236, 0.82);
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        .policy-copy + .policy-copy {
+            margin-top: 14px;
+        }
+
+        .policy-list {
+            margin: 16px 0 0;
+            padding-left: 20px;
+            color: rgba(222, 226, 236, 0.82);
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        .policy-list li + li {
+            margin-top: 10px;
+        }
+
+        .policy-anchor-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .policy-anchor {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e5beb2;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .policy-anchor:hover {
+            color: #ffb59c;
+            transform: translateX(2px);
+        }
+
+        .policy-note {
+            border-radius: 18px;
+            border: 1px solid rgba(172, 137, 126, 0.16);
+            background: rgba(15, 20, 26, 0.56);
+            padding: 14px 16px;
+            color: rgba(229, 190, 178, 0.78);
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+        .app-strip {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(172, 137, 126, 0.16);
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255, 84, 0, 0.08), transparent 26%),
+                radial-gradient(circle at 86% 14%, rgba(30, 78, 216, 0.12), transparent 24%),
+                linear-gradient(180deg, rgba(27, 32, 39, 0.96), rgba(18, 24, 31, 0.98));
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+        }
+
+        .app-strip::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.06;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.9) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.9) 1px, transparent 1px);
+            background-size: 52px 52px;
+            mask-image: radial-gradient(circle at center, #000, transparent 82%);
+        }
+
+        .app-strip > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .app-strip .app-band-kicker {
+            color: rgba(229, 190, 178, 0.74);
+        }
+
+        .app-strip .app-band-title {
+            color: #dee2ec;
+        }
+
+        .app-strip .app-band-copy {
+            color: rgba(222, 226, 236, 0.74);
+        }
+
+        .store-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 8px;
+            border-radius: 16px;
+            border: 1px solid rgba(229, 190, 178, 0.14);
+            background: rgba(9, 15, 21, 0.5);
+            backdrop-filter: blur(10px);
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+        }
+
+        .store-link:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 181, 156, 0.24);
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+        }
+
+        .store-link img {
+            display: block;
+            width: auto;
+            height: 48px;
+        }
+
+        @media (max-width: 640px) {
+            .store-link {
+                padding: 5px 7px;
+                border-radius: 14px;
+            }
+
+            .store-link img {
+                height: 44px;
+            }
+        }
+
+        .site-footer {
+            background:
+                linear-gradient(180deg, rgba(9, 15, 21, 0.92), rgba(9, 15, 21, 1)),
+                url("/assets/images/backgrounds/tech-connections-bg.svg") center / cover no-repeat;
+            border-top: 1px solid rgba(172, 137, 126, 0.16);
+        }
+
+        .footer-link {
+            color: #e5beb2;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: #ffb59c;
+            transform: translateX(2px);
+        }
+
+        @media (max-width: 1023px) {
+            .policy-meta-card {
+                position: static;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .policy-shell,
+            .policy-meta-card,
+            .policy-contact-card {
+                border-radius: 22px;
+            }
+
+            .policy-shell {
+                padding: 22px;
+            }
+
+            .policy-title {
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            .store-link img {
+                height: 50px;
+            }
+        }

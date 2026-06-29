@@ -16,6 +16,9 @@ const { metaRouter } = require("./routes/meta");
 
 const createApp = () => {
     const app = express();
+    const servePublicFile = fileName => (req, res) => {
+        res.sendFile(path.join(ROOT_DIR, fileName));
+    };
 
     app.set("trust proxy", APP_CONFIG.trustProxy);
     app.set("view engine", "ejs");
@@ -34,9 +37,12 @@ const createApp = () => {
     app.use("/api/admin", applyAdminSecurityHeaders, adminApiRateLimiter, adminApiRouter);
     app.use("/api/meta", metaRouter);
 
-    app.get("/", (req, res) => {
-        res.sendFile(path.join(ROOT_DIR, "index.html"));
-    });
+    app.get(["/", "/index.html"], servePublicFile("index.html"));
+    app.get(["/contato", "/contato.html"], servePublicFile("contato.html"));
+    app.get(
+        ["/politica-de-privacidade", "/politicadeprivacidade", "/politicadeprivacidade.html"],
+        servePublicFile("politicadeprivacidade.html")
+    );
 
     app.use(express.static(ROOT_DIR, { dotfiles: "ignore" }));
 

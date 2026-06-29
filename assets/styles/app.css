@@ -1,3 +1,5 @@
+@config "../../tailwind.config.js";
+
 @import "tailwindcss";
 
 @source "../../index.html";
@@ -8,7 +10,4 @@
 
 @import "./base.css";
 @import "./components.css";
-@import "./pages/home.css";
-@import "./pages/contact.css";
-@import "./pages/privacy.css";
 @import "./pages/admin-dashboard.css";

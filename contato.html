@@ -4,57 +4,23 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contato | IP2 Internet</title>
-<meta content="P&aacute;gina de contato da IP2 INTERNET para solicitar atendimento, planos e suporte." name="description"/>
-<link href="./assets/icons/brand/favicon.ico" rel="icon" type="image/x-icon"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "brand-orange": "#FF5400",
-                        "brand-blue": "#1E4ED8",
-                        "background": "#0f141a",
-                        "surface-container-lowest": "#090f15",
-                        "surface-container": "#1b2027",
-                        "surface-container-high": "#20252d",
-                        "surface-container-highest": "#30353d",
-                        "outline": "#ac897e",
-                        "outline-variant": "#5c4037",
-                        "on-surface": "#dee2ec",
-                        "on-surface-variant": "#e5beb2"
-                    },
-                    spacing: {
-                        "gutter": "24px",
-                        "xs": "8px",
-                        "sm": "16px",
-                        "md": "24px",
-                        "lg": "48px",
-                        "xl": "80px"
-                    },
-                    fontFamily: {
-                        "label-md": ["JetBrains Mono", "monospace"],
-                        "label-sm": ["JetBrains Mono", "monospace"],
-                        "headline-lg": ["Space Grotesk", "sans-serif"],
-                        "headline-sm": ["Space Grotesk", "sans-serif"],
-                        "body-md": ["Inter", "sans-serif"],
-                        "body-sm": ["Inter", "sans-serif"]
-                    },
-                    fontSize: {
-                        "label-md": ["14px", {lineHeight: "16px", fontWeight: "700"}],
-                        "label-sm": ["12px", {lineHeight: "14px", fontWeight: "700"}],
-                        "headline-lg": ["40px", {lineHeight: "48px", fontWeight: "700"}],
-                        "headline-sm": ["24px", {lineHeight: "32px", fontWeight: "600"}],
-                        "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}],
-                        "body-sm": ["14px", {lineHeight: "20px", fontWeight: "400"}]
-                    }
-                }
-            }
-        };
-    </script>
+<meta content="Página de contato da IP2 Internet para solicitar atendimento, planos, suporte e cobertura." name="description"/>
+<link href="https://www.ip2internet.com.br/contato" rel="canonical"/>
+<meta content="#0f141a" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="IP2 Internet" property="og:site_name"/>
+<meta content="pt_BR" property="og:locale"/>
+<meta content="Contato | IP2 Internet" property="og:title"/>
+<meta content="Página de contato da IP2 Internet para solicitar atendimento, planos, suporte e cobertura." property="og:description"/>
+<meta content="https://www.ip2internet.com.br/contato" property="og:url"/>
+<meta content="https://www.ip2internet.com.br/assets/images/brand/ip2-logo-simbolo.png" property="og:image"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Contato | IP2 Internet" name="twitter:title"/>
+<meta content="Página de contato da IP2 Internet para solicitar atendimento, planos, suporte e cobertura." name="twitter:description"/>
+<meta content="https://www.ip2internet.com.br/assets/images/brand/ip2-logo-simbolo.png" name="twitter:image"/>
+<link href="/assets/icons/brand/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/assets/styles/site.css" rel="stylesheet"/>
+<link href="/assets/styles/pages/contact.css" rel="stylesheet"/>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -68,433 +34,23 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1955246271821508');
 </script>
 <!-- End Meta Pixel Code -->
-<script defer src="./assets/scripts/meta-capi.js"></script>
-<style>
-        :root {
-            color-scheme: dark;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100dvh;
-            background:
-                radial-gradient(circle at 12% 18%, rgba(30, 78, 216, 0.18), transparent 26%),
-                radial-gradient(circle at 88% 16%, rgba(255, 84, 0, 0.16), transparent 22%),
-                linear-gradient(180deg, #0b1016 0%, #0f141a 42%, #090f15 100%);
-            color: #dee2ec;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .connection-bg {
-            position: relative;
-            isolation: isolate;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at 18% 24%, rgba(30, 78, 216, 0.22), transparent 32%),
-                radial-gradient(circle at 78% 18%, rgba(255, 84, 0, 0.18), transparent 30%),
-                linear-gradient(180deg, rgba(15, 20, 26, 0.72), rgba(15, 20, 26, 0.94)),
-                url("./assets/images/backgrounds/tech-connections-bg.svg") center / cover no-repeat;
-        }
-
-        .connection-bg::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            background:
-                linear-gradient(90deg, rgba(15, 20, 26, 0.94) 0%, rgba(15, 20, 26, 0.58) 48%, rgba(15, 20, 26, 0.76) 100%),
-                radial-gradient(circle at center, transparent 0, rgba(15, 20, 26, 0.16) 44%, rgba(15, 20, 26, 0.84) 100%);
-        }
-
-        .connection-bg::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            opacity: 0.38;
-            background-image:
-                linear-gradient(rgba(222, 226, 236, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(222, 226, 236, 0.05) 1px, transparent 1px);
-            background-size: 44px 44px;
-            mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
-        }
-
-        .connection-bg > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .brand-logo {
-            object-fit: contain;
-            filter: drop-shadow(0 0 14px rgba(255, 84, 0, 0.28));
-        }
-
-        .glow-orange {
-            box-shadow: 0 0 22px rgba(255, 84, 0, 0.28);
-        }
-
-        .nav-shell {
-            background: rgba(9, 15, 21, 0.8);
-            border-bottom: 1px solid rgba(172, 137, 126, 0.2);
-            backdrop-filter: blur(14px);
-        }
-
-        .tech-line {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 181, 156, 0.36), transparent);
-        }
-
-        .support-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 84, 0, 0.24);
-            background: rgba(255, 84, 0, 0.1);
-            color: #ffb59c;
-            font-family: "JetBrains Mono", monospace;
-            font-size: 12px;
-            line-height: 14px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-
-        .contact-info-card,
-        .form-shell {
-            border: 1px solid rgba(172, 137, 126, 0.22);
-            background:
-                radial-gradient(circle at 88% 0%, rgba(30, 78, 216, 0.12), transparent 28%),
-                rgba(26, 31, 38, 0.82);
-            backdrop-filter: blur(14px);
-            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
-        }
-
-        .contact-info-card {
-            border-radius: 24px;
-            padding: 22px;
-            transition: transform 0.24s ease, border-color 0.24s ease;
-        }
-
-        .contact-info-card:hover {
-            transform: translateY(-3px);
-            border-color: rgba(255, 181, 156, 0.36);
-        }
-
-        .contact-info-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 16px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(172, 137, 126, 0.18);
-            background: rgba(48, 53, 61, 0.32);
-            color: #ff8a58;
-        }
-
-        .form-shell {
-            border-radius: 28px;
-            padding: 28px;
-        }
-
-        .field-label {
-            display: block;
-            margin-bottom: 8px;
-            color: #e5beb2;
-            font-family: "JetBrains Mono", monospace;
-            font-size: 12px;
-            line-height: 14px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .field-control,
-        .field-select,
-        .field-textarea {
-            width: 100%;
-            border: 1px solid rgba(172, 137, 126, 0.2);
-            border-radius: 18px;
-            background: #000000;
-            color: #dee2ec;
-            padding: 14px 16px;
-            font-family: Inter, sans-serif;
-            font-size: 15px;
-            line-height: 22px;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-        }
-
-        input.field-control[type="text"],
-        input.field-control[type="email"],
-        input.field-control[type="tel"] {
-            background: #000000 !important;
-            color: #dee2ec !important;
-            -webkit-text-fill-color: #dee2ec;
-        }
-
-        .field-control::placeholder,
-        .field-textarea::placeholder {
-            color: rgba(222, 226, 236, 0.62);
-        }
-
-        input.field-control[type="text"]::placeholder,
-        input.field-control[type="email"]::placeholder,
-        input.field-control[type="tel"]::placeholder {
-            color: rgba(222, 226, 236, 0.62) !important;
-            opacity: 1;
-            -webkit-text-fill-color: rgba(222, 226, 236, 0.62);
-        }
-
-        .field-control:focus,
-        .field-select:focus,
-        .field-textarea:focus {
-            outline: none;
-            border-color: rgba(255, 84, 0, 0.72);
-            box-shadow: 0 0 0 3px rgba(255, 84, 0, 0.12);
-            transform: translateY(-1px);
-        }
-
-        .field-select {
-            appearance: none;
-            background-image:
-                linear-gradient(45deg, transparent 50%, rgba(255, 181, 156, 0.9) 50%),
-                linear-gradient(135deg, rgba(255, 181, 156, 0.9) 50%, transparent 50%);
-            background-position:
-                calc(100% - 22px) calc(50% - 2px),
-                calc(100% - 16px) calc(50% - 2px);
-            background-size: 6px 6px, 6px 6px;
-            background-repeat: no-repeat;
-            padding-right: 40px;
-        }
-
-        .field-textarea {
-            min-height: 148px;
-            resize: vertical;
-        }
-
-        .helper-note {
-            color: rgba(229, 190, 178, 0.78);
-            font-size: 13px;
-            line-height: 18px;
-        }
-
-        .cta-primary,
-        .cta-secondary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            border-radius: 999px;
-            padding: 14px 22px;
-            font-family: "JetBrains Mono", monospace;
-            font-size: 13px;
-            line-height: 15px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease, opacity 0.22s ease;
-        }
-
-        .cta-primary {
-            border: 1px solid transparent;
-            background: #ff5400;
-            color: #ffffff;
-            box-shadow: 0 0 22px rgba(255, 84, 0, 0.24);
-        }
-
-        .cta-primary:hover {
-            transform: translateY(-2px);
-            background: #ff6b24;
-        }
-
-        .cta-primary:disabled {
-            opacity: 0.72;
-            cursor: wait;
-            transform: none;
-        }
-
-        .cta-secondary {
-            border: 1px solid rgba(172, 137, 126, 0.22);
-            background: rgba(15, 20, 26, 0.62);
-            color: #dee2ec;
-        }
-
-        .cta-secondary:hover {
-            transform: translateY(-2px);
-            border-color: rgba(255, 181, 156, 0.34);
-            color: #ffb59c;
-        }
-
-        .consent-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 14px 16px;
-            border-radius: 18px;
-            border: 1px solid rgba(172, 137, 126, 0.16);
-            background: rgba(15, 20, 26, 0.56);
-        }
-
-        .consent-row input {
-            margin-top: 3px;
-            accent-color: #ff5400;
-        }
-
-        .status-banner {
-            display: none;
-            margin: 0;
-            border-radius: 18px;
-            padding: 14px 16px;
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 500;
-        }
-
-        .status-banner.is-visible {
-            display: block;
-        }
-
-        .status-banner.success {
-            border: 1px solid rgba(53, 182, 242, 0.26);
-            background: rgba(30, 78, 216, 0.12);
-            color: #cfe4ff;
-        }
-
-        .status-banner.error {
-            border: 1px solid rgba(255, 84, 0, 0.3);
-            background: rgba(255, 84, 0, 0.12);
-            color: #ffd6c8;
-        }
-
-        .app-strip {
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(172, 137, 126, 0.16);
-            background:
-                radial-gradient(circle at 12% 18%, rgba(255, 84, 0, 0.08), transparent 26%),
-                radial-gradient(circle at 86% 14%, rgba(30, 78, 216, 0.12), transparent 24%),
-                linear-gradient(180deg, rgba(27, 32, 39, 0.96), rgba(18, 24, 31, 0.98));
-            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
-        }
-
-        .app-strip::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            opacity: 0.06;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.9) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.9) 1px, transparent 1px);
-            background-size: 52px 52px;
-            mask-image: radial-gradient(circle at center, #000, transparent 82%);
-        }
-
-        .app-strip > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .app-strip .app-band-kicker {
-            color: rgba(229, 190, 178, 0.74);
-        }
-
-        .app-strip .app-band-title {
-            color: #dee2ec;
-        }
-
-        .app-strip .app-band-copy {
-            color: rgba(222, 226, 236, 0.74);
-        }
-
-        .store-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 6px 8px;
-            border-radius: 16px;
-            border: 1px solid rgba(229, 190, 178, 0.14);
-            background: rgba(9, 15, 21, 0.5);
-            backdrop-filter: blur(10px);
-            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-        }
-
-        .store-link:hover {
-            transform: translateY(-2px);
-            border-color: rgba(255, 181, 156, 0.24);
-            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
-        }
-
-        .store-link img {
-            display: block;
-            width: auto;
-            height: 48px;
-        }
-
-        @media (max-width: 640px) {
-            .store-link {
-                padding: 5px 7px;
-                border-radius: 14px;
-            }
-
-            .store-link img {
-                height: 44px;
-            }
-        }
-
-        .site-footer {
-            background:
-                linear-gradient(180deg, rgba(9, 15, 21, 0.92), rgba(9, 15, 21, 1)),
-                url("./assets/images/backgrounds/tech-connections-bg.svg") center / cover no-repeat;
-            border-top: 1px solid rgba(172, 137, 126, 0.16);
-        }
-
-        .footer-link {
-            color: #e5beb2;
-            transition: color 0.2s ease, transform 0.2s ease;
-        }
-
-        .footer-link:hover {
-            color: #ffb59c;
-            transform: translateX(2px);
-        }
-
-        @media (max-width: 767px) {
-            .form-shell,
-            .contact-info-card {
-                border-radius: 22px;
-            }
-
-            .store-link img {
-                height: 50px;
-            }
-        }
-    </style>
+<script defer src="/assets/scripts/ui-icons.js"></script>
+<script defer src="/assets/scripts/meta-capi.js"></script>
+<script defer src="/assets/scripts/pages/contact.js"></script>
 </head>
 <body class="font-body-md text-on-surface bg-background" data-meta-page="contact">
+
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1955246271821508&ev=PageView&noscript=1"
 /></noscript>
 <nav class="nav-shell fixed top-0 left-0 right-0 z-50">
 <div class="max-w-7xl mx-auto px-gutter py-4 flex items-center justify-between gap-md">
-<a class="flex items-center gap-3 min-w-0" href="./index.html">
-<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="./assets/images/brand/ip2-logo-simbolo.png"/>
+<a class="flex items-center gap-3 min-w-0" href="/">
+<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="/assets/images/brand/ip2-logo-simbolo.png"/>
 <span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">IP2 INTERNET</span>
 </a>
 <div class="flex items-center gap-sm">
-<a class="hidden sm:inline-flex cta-secondary" href="./index.html">
+<a class="hidden sm:inline-flex cta-secondary" href="/">
 <span class="material-symbols-outlined text-[18px]">arrow_back</span>
 Ver planos
 </a>
@@ -517,7 +73,7 @@ Atendimento IP2
 </span>
 <div class="space-y-md">
 <div class="flex items-center gap-3">
-<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="./assets/images/brand/ip2-logo-simbolo.png"/>
+<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="/assets/images/brand/ip2-logo-simbolo.png"/>
 <span class="font-label-md text-label-md text-brand-orange uppercase tracking-[0.18em]">Contato IP2</span>
 </div>
 <h1 class="font-headline-lg text-[clamp(2.6rem,5vw,4.8rem)] leading-[0.95] tracking-tight text-on-surface">Solicite atendimento da nossa equipe</h1>
@@ -558,7 +114,7 @@ Atendimento IP2
 <div class="space-y-md">
 <div class="form-shell">
 <div class="flex items-center gap-3 mb-sm">
-<img alt="Logo IP2 Internet" class="brand-logo h-10 w-10" src="./assets/images/brand/ip2-logo-simbolo.png"/>
+<img alt="Logo IP2 Internet" class="brand-logo h-10 w-10" src="/assets/images/brand/ip2-logo-simbolo.png"/>
 <span class="font-label-md text-label-md text-brand-orange uppercase tracking-[0.18em]">Fale com a gente</span>
 </div>
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Formul&aacute;rio de contato</h2>
@@ -663,10 +219,10 @@ Enviar solicita&ccedil;&atilde;o
 <p class="app-band-copy font-body-md text-body-md max-w-2xl mx-auto mt-sm">Use o app <strong>IP2 SAC</strong> para segunda via, abertura de chamados, atualiza&ccedil;&atilde;o de boleto, diagn&oacute;stico de conex&atilde;o e avisos do servi&ccedil;o.</p>
 <div class="flex flex-wrap items-center justify-center gap-md mt-lg">
 <a class="store-link" href="https://www.ip2internet.com.br/meta/redirect.html" rel="noopener noreferrer" target="_blank">
-<img alt="Baixar IP2 SAC na App Store" src="./assets/images/badges/apple-200x59.png"/>
+<img alt="Baixar IP2 SAC na App Store" src="/assets/images/badges/apple-200x59.png"/>
 </a>
 <a class="store-link" href="https://www.ip2internet.com.br/meta/redirect.html" rel="noopener noreferrer" target="_blank">
-<img alt="Baixar IP2 SAC no Google Play" src="./assets/images/badges/google-200x59.png"/>
+<img alt="Baixar IP2 SAC no Google Play" src="/assets/images/badges/google-200x59.png"/>
 </a>
 </div>
 </div>
@@ -679,7 +235,7 @@ Enviar solicita&ccedil;&atilde;o
 <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr] gap-lg items-start">
 <div class="space-y-sm">
 <div class="flex items-center gap-3">
-<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="./assets/images/brand/ip2-logo-simbolo.png"/>
+<img alt="Logo IP2 Internet" class="brand-logo h-12 w-12" src="/assets/images/brand/ip2-logo-simbolo.png"/>
 <span class="font-headline-sm text-headline-sm text-on-surface font-bold">IP2 INTERNET</span>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Internet de fibra com atendimento para planos residenciais, empresariais, suporte e servi&ccedil;os digitais.</p>
@@ -688,7 +244,7 @@ Enviar solicita&ccedil;&atilde;o
 <div>
 <h3 class="font-label-md text-label-md text-on-surface uppercase tracking-widest mb-md">Atalhos</h3>
 <nav class="grid grid-cols-1 gap-sm">
-<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="./index.html"><span class="material-symbols-outlined text-[18px]">home</span>Ver planos</a>
+<a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="/"><span class="material-symbols-outlined text-[18px]">home</span>Ver planos</a>
 <a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://sac.grupoip2.com.br" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">account_circle</span>Central do assinante</a>
 <a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://www.portaldoassinante.com/ip2internet/login" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">apps</span>Portal de aplicativos</a>
 <a class="footer-link font-body-sm text-body-sm inline-flex items-center gap-2" href="https://openspeedtest.grupoip2.com.br/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">speed</span>Teste de velocidade</a>
@@ -705,109 +261,5 @@ Enviar solicita&ccedil;&atilde;o
 </div>
 </div>
 </footer>
-
-<script>
-        const leadForm = document.getElementById("lead-form");
-        const leadStatus = document.getElementById("lead-form-status");
-        const leadSubmit = document.getElementById("lead-submit");
-        const leadNext = document.getElementById("lead-next");
-        const whatsappField = document.getElementById("lead-whatsapp");
-        const trackingFieldNames = [
-            "utm_source",
-            "utm_medium",
-            "utm_campaign",
-            "utm_term",
-            "utm_content",
-            "gclid",
-            "fbclid"
-        ];
-
-        const setLeadStatus = (type, message) => {
-            leadStatus.textContent = message;
-            leadStatus.className = `status-banner is-visible ${type}`;
-        };
-
-        const syncPageMetadata = () => {
-            const params = new URLSearchParams(window.location.search);
-
-            trackingFieldNames.forEach(name => {
-                const field = leadForm.elements[name];
-                if (field) {
-                    field.value = params.get(name) || "";
-                }
-            });
-
-            leadForm.elements.captured_at.value = new Date().toISOString();
-            leadForm.elements.page_url.value = window.location.href;
-            leadForm.elements.page_path.value = window.location.pathname;
-            leadNext.value = `${window.location.origin}${window.location.pathname}?status=sucesso`;
-
-            if (params.get("status") === "sucesso") {
-                setLeadStatus("success", "Recebemos sua solicitação com sucesso. Em breve nossa equipe entrará em contato.");
-            }
-        };
-
-        const formatWhatsapp = value => {
-            const digits = value.replace(/\D/g, "").slice(0, 11);
-
-            if (digits.length <= 2) {
-                return digits;
-            }
-
-            if (digits.length <= 7) {
-                return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
-            }
-
-            if (digits.length <= 10) {
-                return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
-            }
-
-            return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
-        };
-
-        whatsappField.addEventListener("input", event => {
-            event.target.value = formatWhatsapp(event.target.value);
-        });
-
-        syncPageMetadata();
-
-        let leadNativeSubmit = false;
-
-        leadForm.addEventListener("submit", async event => {
-            if (leadNativeSubmit) {
-                return;
-            }
-
-            if (!leadForm.reportValidity()) {
-                event.preventDefault();
-                setLeadStatus("error", "Revise os campos obrigatórios e tente novamente.");
-                return;
-            }
-
-            event.preventDefault();
-            leadSubmit.disabled = true;
-            leadSubmit.innerHTML = '<span class="material-symbols-outlined text-[18px]">hourglass_top</span>Enviando';
-
-            const leadPayload = {
-                name: leadForm.elements.nome.value,
-                phone: leadForm.elements.whatsapp.value,
-                email: leadForm.elements.email.value,
-                profile: leadForm.elements.perfil.value,
-                planInterest: leadForm.elements.plano_interesse.value
-            };
-
-            try {
-                if (window.IP2Meta && typeof window.IP2Meta.trackLead === "function") {
-                    await Promise.race([
-                        window.IP2Meta.trackLead(leadPayload),
-                        new Promise(resolve => window.setTimeout(resolve, 800))
-                    ]);
-                }
-            } finally {
-                leadNativeSubmit = true;
-                leadForm.submit();
-            }
-        });
-    </script>
 </body>
 </html>

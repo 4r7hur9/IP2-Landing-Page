@@ -1,5 +1,14 @@
-/*
- * Os estilos de componentes vao migrar para este arquivo durante a modularizacao.
- * Elementos compartilhados, como navegacao, botoes, cards e blocos do rodape,
- * devem ficar aqui em vez de permanecerem inline nas paginas HTML.
- */
+.material-symbols-outlined {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.local-icon-svg {
+    width: 1em;
+    height: 1em;
+    display: block;
+}

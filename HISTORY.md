@@ -1,31 +1,31 @@
-# Historico do Projeto
+# Histórico do Projeto
 
 ## Baseline conhecido antes da reforma estrutural
 
-- O site e servido por Node.js com Express.
-- As paginas publicas principais sao `index.html`, `contato.html` e `politicadeprivacidade.html`.
-- A integracao com Meta Conversions API ja existe no backend com:
+- O site é servido por Node.js com Express.
+- As páginas públicas principais são `index.html`, `contato.html` e `politicadeprivacidade.html`.
+- A integração com Meta Conversions API já existe no backend com:
   - `POST /api/meta/events`
   - `GET /api/meta/health`
-- O front-end ja envia `PageView` e `Lead` para a integracao Meta.
-- Os assets do site ja foram reorganizados em `assets/` com separacao de icones, imagens, scripts e estilos.
+- O front-end já envia `PageView` e `Lead` para a integração Meta.
+- Os assets do site já foram reorganizados em `assets/` com separação de ícones, imagens, scripts e estilos.
 
 ## 2026-06-26
 
-### Fase 0 - Preparacao do fluxo
+### Fase 0 - Preparação do fluxo
 
 - Criada a branch `dev` para concentrar o desenvolvimento da reforma.
-- Adicionado `.editorconfig` para padronizar formatacao.
-- Adicionado `docs/ENGINEERING-STANDARDS.md` para formalizar convencoes de nomenclatura, idioma e organizacao.
+- Adicionado `.editorconfig` para padronizar formatação.
+- Adicionado `docs/ENGINEERING-STANDARDS.md` para formalizar convenções de nomenclatura, idioma e organização.
 
-### Fase 1 - Fundacao tecnica
+### Fase 1 - Fundação técnica
 
-- Instaladas as dependencias base para Tailwind CLI, Prisma, EJS e execucao concorrente no ambiente de desenvolvimento.
+- Instaladas as dependências base para Tailwind CLI, Prisma, EJS e execução concorrente no ambiente de desenvolvimento.
 - Criados scripts iniciais de build de estilos e comandos do Prisma.
-- Criada a estrutura base para estilos modulares, templates com renderizacao no servidor, conteudo centralizado, fontes locais e icones SVG.
+- Criada a estrutura base para estilos modulares, templates com renderização no servidor, conteúdo centralizado, fontes locais e ícones SVG.
 - Adicionados `README.md` e `HISTORY.md` como documentos oficiais do projeto.
 
-### Fase 2 - Seguranca e autenticacao inicial da dashboard
+### Fase 2 - Segurança e autenticação inicial da dashboard
 
 - Implementado login administrativo com JWT em cookies `httpOnly` e `SameSite=Strict`.
 - Criadas rotas administrativas iniciais:
@@ -34,21 +34,37 @@
   - `/api/admin/session`
   - `/api/admin/security-status`
 - Adicionados `helmet`, `express-rate-limit`, `cookie-parser`, `jsonwebtoken`, `bcryptjs` e `zod`.
-- Configurado `trust proxy` de forma segura por padrao via `TRUST_PROXY=0`.
-- Criado utilitario `npm run generate:password-hash -- "senha"` para preparar `ADMIN_DASHBOARD_PASSWORD_HASH`.
-- Validado o fluxo de login, redirecionamento, protecao de rota e leitura da sessao autenticada.
+- Configurado `trust proxy` de forma segura por padrão via `TRUST_PROXY=0`.
+- Criado utilitário `npm run generate:password-hash -- "senha"` para preparar `ADMIN_DASHBOARD_PASSWORD_HASH`.
+- Validado o fluxo de login, redirecionamento, proteção de rota e leitura da sessão autenticada.
 
-### Fase 3 - Persistencia Prisma/PostgreSQL e observabilidade
+### Fase 3 - Persistência Prisma/PostgreSQL e observabilidade
 
 - Expandido o `schema.prisma` com modelos para:
   - `AdminSession`
   - `SecurityAuditLog`
   - `MetaEventLog`
   - `MetaQualitySnapshot`
-- Criado helper central de banco em `server/lib/database.js` com tratamento para banco nao configurado e falha de acesso.
-- A autenticacao admin passou a usar sessao persistida e revogavel no banco.
-- A dashboard agora distingue erro de autenticacao de erro de banco/migration ausente.
-- Criado registro de auditoria para login bem-sucedido, login falho, refresh, logout e tentativa de acesso sem autenticacao.
-- A integracao Meta ganhou base de persistencia para registrar status dos envios e contexto do evento.
+- Criado helper central de banco em `server/lib/database.js` com tratamento para banco não configurado e falha de acesso.
+- A autenticação admin passou a usar sessão persistida e revogável no banco.
+- A dashboard agora distingue erro de autenticação de erro de banco ou migration ausente.
+- Criado registro de auditoria para login bem-sucedido, login falho, refresh, logout e tentativa de acesso sem autenticação.
+- A integração Meta ganhou base de persistência para registrar status dos envios e contexto do evento.
 - Gerada a migration inicial em `prisma/migrations/20260626204500_phase3_persistence/migration.sql`.
-- Como `DATABASE_URL` ainda nao estava configurada no ambiente local, a migration foi preparada no repositório, mas nao aplicada automaticamente ao banco.
+- Como `DATABASE_URL` ainda não estava configurada no ambiente local, a migration foi preparada no repositório, mas não aplicada automaticamente ao banco.
+
+### Fase 4 - Modularização pública, SEO e assets locais
+
+- Removidos os carregamentos de Tailwind via CDN e de Google Fonts nas páginas públicas.
+- Criado `tailwind.config.js` local com o tema customizado do site para manter classes como `bg-background`, `px-gutter`, `text-display-lg` e variantes de superfície.
+- As páginas públicas agora carregam:
+  - `assets/styles/site.css` como camada compartilhada
+  - CSS específico por página em `assets/styles/pages/`
+  - scripts modulares em `assets/scripts/pages/`
+- Adicionadas fontes locais em `assets/fonts/` para `Space Grotesk`, `Inter` e `JetBrains Mono`.
+- Substituída a dependência de Material Symbols por ícones SVG locais processados em `assets/scripts/ui-icons.js`.
+- Incluídos metadados de SEO, Open Graph e Twitter diretamente no `head` das páginas públicas.
+- Adicionadas rotas públicas amigáveis no Express para:
+  - `/contato`
+  - `/politica-de-privacidade`
+- O fluxo de `npm start` passou a executar `prestart`, garantindo build dos estilos e geração do Prisma Client antes da subida da aplicação.
