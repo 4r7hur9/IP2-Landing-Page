@@ -76,6 +76,23 @@ As páginas públicas continuam em HTML, mas agora já operam com assets locais 
 - os ícones públicos foram trocados para SVG local via `assets/scripts/ui-icons.js`
 - o `npm start` executa `prestart` com build dos estilos e geração do Prisma Client antes de subir a aplicação
 
+## Dashboard administrativa atual
+
+A dashboard em `/admin` agora possui leitura operacional consolidada com:
+
+- resumo dos eventos Meta na janela recente
+- taxa de sucesso da Meta Conversions API
+- sessões administrativas ativas
+- alertas de segurança persistidos no banco
+- histórico recente de eventos Meta e auditoria administrativa
+- registro manual de snapshots de Dataset Quality
+
+Endpoints auxiliares já disponíveis:
+
+- `GET /api/admin/session`
+- `GET /api/admin/security-status`
+- `GET /api/admin/dashboard-overview`
+
 ## Rotas públicas amigáveis
 
 - `/`

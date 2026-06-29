@@ -1,6 +1,7 @@
 const { isDatabaseConfigured } = require("../lib/database");
 const express = require("express");
 const { requireAdminSession } = require("../middleware/require-admin-session");
+const { getAdminDashboardOverview } = require("../services/admin-dashboard-overview");
 
 const router = express.Router();
 
@@ -27,6 +28,19 @@ router.get("/security-status", requireAdminSession, (req, res) => {
             helmet: true
         }
     });
+});
+
+router.get("/dashboard-overview", requireAdminSession, async (req, res, next) => {
+    try {
+        const overview = await getAdminDashboardOverview();
+
+        res.json({
+            ok: true,
+            overview
+        });
+    } catch (error) {
+        next(error);
+    }
 });
 
 module.exports = {

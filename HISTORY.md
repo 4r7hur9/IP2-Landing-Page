@@ -68,3 +68,16 @@
   - `/contato`
   - `/politica-de-privacidade`
 - O fluxo de `npm start` passou a executar `prestart`, garantindo build dos estilos e geração do Prisma Client antes da subida da aplicação.
+
+### Fase 5 - Dashboard operacional e acompanhamento manual de qualidade
+
+- Criado o serviço `server/services/admin-dashboard-overview.js` para consolidar métricas da Meta, auditoria administrativa, sessões ativas e snapshots de qualidade.
+- A dashboard em `views/pages/admin-dashboard.ejs` deixou de ser estática e passou a exibir:
+  - cards de resumo operacional
+  - saúde da integração Meta
+  - tendência diária da janela recente
+  - tabelas com eventos Meta e auditoria administrativa
+  - histórico de snapshots de Dataset Quality
+- Adicionada rota protegida `GET /api/admin/dashboard-overview` para leitura estruturada do painel.
+- Adicionado fluxo protegido `POST /admin/meta-quality-snapshots` para registrar snapshots manuais de Dataset Quality até a fase de automação.
+- Validada a renderização do EJS e a consolidação do overview mesmo sem `DATABASE_URL`, com fallback seguro para ambiente sem banco configurado.
