@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link rel="icon" href="/assets/icons/brand/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/styles/site.css" />
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+    <main class="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-8 px-6 py-10 lg:px-10">
+        <header class="flex flex-col gap-5 rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-2xl shadow-slate-950/50 lg:flex-row lg:items-end lg:justify-between">
+            <div class="space-y-3">
+                <p class="text-sm font-medium uppercase tracking-[0.26em] text-cyan-300">Dashboard interna</p>
+                <div class="space-y-2">
+                    <h1 class="text-3xl font-semibold tracking-tight text-white">Camada administrativa protegida</h1>
+                    <p class="max-w-3xl text-sm leading-6 text-slate-400">
+                        Esta e a base segura da dashboard. A coleta de metricas, Dataset Quality e consultas operacionais entram na proxima fase sobre persistencia e observabilidade.
+                    </p>
+                </div>
+            </div>
+
+            <form action="/admin/logout" method="post">
+                <button
+                    type="submit"
+                    class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/60 hover:bg-cyan-400/10"
+                >
+                    Sair da dashboard
+                </button>
+            </form>
+        </header>
+
+        <section class="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+            <article class="rounded-3xl border border-white/10 bg-slate-900/70 p-8">
+                <div class="space-y-3">
+                    <p class="text-xs uppercase tracking-[0.22em] text-slate-400">Sessao autenticada</p>
+                    <h2 class="text-2xl font-semibold text-white">Acesso liberado para <%= dashboardUsername %></h2>
+                    <p class="text-sm leading-6 text-slate-400">
+                        A sessao atual foi criada com JWT em cookie protegido e as rotas administrativas ja estao atras de middleware dedicado.
+                    </p>
+                </div>
+
+                <dl class="mt-8 grid gap-4 sm:grid-cols-2">
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                        <dt class="text-xs uppercase tracking-[0.2em] text-slate-400">Emitido em</dt>
+                        <dd class="mt-3 text-sm font-medium text-white"><%= sessionIssuedAt %></dd>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                        <dt class="text-xs uppercase tracking-[0.2em] text-slate-400">Expira em</dt>
+                        <dd class="mt-3 text-sm font-medium text-white"><%= sessionExpiresAt %></dd>
+                    </div>
+                </dl>
+            </article>
+
+            <aside class="rounded-3xl border border-white/10 bg-slate-900/70 p-8">
+                <div class="space-y-5">
+                    <div class="space-y-2">
+                        <p class="text-xs uppercase tracking-[0.22em] text-slate-400">Protecoes ativas</p>
+                        <h2 class="text-xl font-semibold text-white">Hardening inicial</h2>
+                    </div>
+
+                    <ul class="space-y-3 text-sm leading-6 text-slate-300">
+                        <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Helmet com headers de seguranca e CSP dedicada na area admin.</li>
+                        <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Rate limit global e rate limit mais forte no login administrativo.</li>
+                        <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">JWT em cookies <code>httpOnly</code> com <code>SameSite=Strict</code>.</li>
+                        <li class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Validacao de entrada com Zod no fluxo de autenticacao.</li>
+                    </ul>
+
+                    <% if (sessionWasRefreshed) { %>
+                        <div class="rounded-2xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-3 text-sm leading-6 text-cyan-100">
+                            A sessao foi renovada automaticamente usando o refresh token.
+                        </div>
+                    <% } %>
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>

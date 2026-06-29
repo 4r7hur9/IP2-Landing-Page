@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link rel="icon" href="/assets/icons/brand/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/styles/site.css" />
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+    <main class="mx-auto flex min-h-screen w-full max-w-6xl items-center justify-center px-6 py-16">
+        <section class="grid w-full max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl shadow-slate-950/60 lg:grid-cols-[1.15fr_0.85fr]">
+            <div class="hidden bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.28),_transparent_52%),linear-gradient(180deg,_#0f172a_0%,_#020617_100%)] p-12 lg:flex lg:flex-col lg:justify-between">
+                <div class="space-y-6">
+                    <span class="inline-flex w-fit rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+                        Dashboard interna
+                    </span>
+                    <div class="space-y-4">
+                        <h1 class="max-w-md text-4xl font-semibold tracking-tight text-white">
+                            Acesso protegido para acompanhar seguranca, Meta e operacao.
+                        </h1>
+                        <p class="max-w-lg text-base leading-7 text-slate-300">
+                            Esta area usa JWT em cookies protegidos, limite de tentativas de login e cabecalhos endurecidos para reduzir abuso.
+                        </p>
+                    </div>
+                </div>
+                <dl class="grid gap-5 text-sm text-slate-300 sm:grid-cols-2">
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                        <dt class="text-xs uppercase tracking-[0.2em] text-slate-400">Protecoes</dt>
+                        <dd class="mt-3 text-lg font-medium text-white">JWT + rate limit + CSP</dd>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                        <dt class="text-xs uppercase tracking-[0.2em] text-slate-400">Status</dt>
+                        <dd class="mt-3 text-lg font-medium text-white"><%= isAuthConfigured ? "Pronto para login" : "Configurar .env" %></dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="p-8 sm:p-10 lg:p-12">
+                <div class="space-y-8">
+                    <div class="space-y-3">
+                        <p class="text-sm font-medium uppercase tracking-[0.26em] text-orange-300">IP2 Internet</p>
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-tight text-white">Entrar na dashboard</h2>
+                            <p class="text-sm leading-6 text-slate-400">
+                                Use a credencial administrativa configurada no ambiente para acessar o painel interno.
+                            </p>
+                        </div>
+                    </div>
+
+                    <% if (!isAuthConfigured) { %>
+                        <div class="rounded-2xl border border-amber-400/30 bg-amber-400/10 p-4 text-sm leading-6 text-amber-100">
+                            A autenticacao ainda nao esta configurada. Preencha <code>ADMIN_DASHBOARD_USER</code>, <code>ADMIN_DASHBOARD_PASSWORD_HASH</code>, <code>JWT_ACCESS_SECRET</code> e <code>JWT_REFRESH_SECRET</code> no seu <code>.env</code>.
+                        </div>
+                    <% } %>
+
+                    <% if (!isDatabaseConfigured) { %>
+                        <div class="rounded-2xl border border-sky-400/30 bg-sky-400/10 p-4 text-sm leading-6 text-sky-100">
+                            O banco PostgreSQL ainda nao esta configurado para a dashboard. Preencha <code>DATABASE_URL</code> e execute a migration inicial antes de usar a autenticacao persistente.
+                        </div>
+                    <% } %>
+
+                    <% if (errorMessage) { %>
+                        <div class="rounded-2xl border border-rose-400/30 bg-rose-400/10 p-4 text-sm leading-6 text-rose-100">
+                            <%= errorMessage %>
+                        </div>
+                    <% } %>
+
+                    <form class="space-y-5" action="/admin/login" method="post" autocomplete="on" novalidate>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-slate-200" for="username">Usuario administrativo</label>
+                            <input
+                                id="username"
+                                name="username"
+                                type="text"
+                                value="<%= submittedUsername %>"
+                                placeholder="<%= dashboardUsernameHint %>"
+                                class="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-cyan-300/60"
+                                required
+                            />
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-slate-200" for="password">Senha</label>
+                            <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                class="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-cyan-300/60"
+                                required
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="inline-flex w-full items-center justify-center rounded-2xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 focus:ring-offset-slate-950"
+                        >
+                            Entrar com seguranca
+                        </button>
+                    </form>
+
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4 text-xs leading-6 text-slate-400">
+                        Esta area usa cookies <strong class="text-slate-200">httpOnly</strong> com <strong class="text-slate-200">SameSite=Strict</strong>. O browser nao tem acesso direto aos tokens JWT.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

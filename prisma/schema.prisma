@@ -1,0 +1,96 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+enum SecurityAuditEventType {
+    ADMIN_LOGIN_SUCCESS
+    ADMIN_LOGIN_FAILURE
+    ADMIN_LOGOUT
+    ADMIN_SESSION_REFRESH
+    ADMIN_SESSION_REVOKED
+    ADMIN_UNAUTHORIZED_ACCESS
+}
+
+enum MetaEventDeliveryStatus {
+    ACCEPTED
+    FAILED
+    CONFIGURATION_ERROR
+    REQUEST_ERROR
+    VALIDATION_ERROR
+}
+
+model AdminSession {
+    id                    String             @id
+    dashboardUsername     String
+    refreshTokenHash      String
+    refreshTokenExpiresAt DateTime
+    ipAddress             String?
+    userAgent             String?
+    lastUsedAt            DateTime?
+    revokedAt             DateTime?
+    createdAt             DateTime           @default(now())
+    updatedAt             DateTime           @updatedAt
+    auditLogs             SecurityAuditLog[]
+
+    @@index([dashboardUsername])
+    @@index([refreshTokenExpiresAt])
+    @@index([revokedAt])
+}
+
+model SecurityAuditLog {
+    id                String                 @id @default(uuid())
+    eventType         SecurityAuditEventType
+    success           Boolean                @default(true)
+    dashboardUsername String?
+    ipAddress         String?
+    userAgent         String?
+    details           Json?
+    sessionId         String?
+    createdAt         DateTime               @default(now())
+    session           AdminSession?          @relation(fields: [sessionId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+    @@index([eventType, createdAt])
+    @@index([dashboardUsername, createdAt])
+}
+
+model MetaEventLog {
+    id              String                  @id @default(uuid())
+    eventId         String                  @unique
+    eventName       String
+    eventSourceUrl  String?
+    pageType        String?
+    contentName     String?
+    contentCategory String?
+    planInterest    String?
+    profile         String?
+    status          MetaEventDeliveryStatus
+    httpStatus      Int?
+    errorMessage    String?
+    ipAddress       String?
+    userAgent       String?
+    metaResponse    Json?
+    createdAt       DateTime                @default(now())
+    updatedAt       DateTime                @updatedAt
+
+    @@index([status, createdAt])
+    @@index([eventName, createdAt])
+    @@index([pageType, createdAt])
+}
+
+model MetaQualitySnapshot {
+    id             String   @id @default(uuid())
+    datasetId      String?
+    source         String   @default("manual")
+    qualityScore   Int?
+    qualityStatus  String?
+    matchingStatus String?
+    diagnostics    Json?
+    createdAt      DateTime @default(now())
+
+    @@index([createdAt])
+}
