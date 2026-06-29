@@ -1,4 +1,4 @@
-# IP2 Landing Page
+# Projeto do Site IP2 Internet
 
 ## Visao geral
 
@@ -10,7 +10,7 @@ Projeto institucional da IP2 Internet com paginas publicas, integracao com Meta 
 - Tailwind CLI local
 - Prisma
 - PostgreSQL
-- EJS preparado para a fase de templates server-side
+- EJS preparado para a fase de renderizacao no servidor
 
 ## Comandos principais
 
@@ -63,7 +63,7 @@ npm run generate:password-hash -- "sua-senha-forte"
 - `prisma/`: schema e futuras migrations
 - `server/`: aplicacao Express e servicos do backend
 - `src/content/`: dados centralizados do conteudo do site
-- `views/`: layouts, partials e paginas server-side
+- `views/`: layouts, parciais e paginas com renderizacao no servidor
 
 ## Estado atual da migracao
 

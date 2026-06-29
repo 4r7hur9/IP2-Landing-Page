@@ -22,7 +22,7 @@
 
 - Instaladas as dependencias base para Tailwind CLI, Prisma, EJS e execucao concorrente no ambiente de desenvolvimento.
 - Criados scripts iniciais de build de estilos e comandos do Prisma.
-- Criada a estrutura base para estilos modulares, templates server-side, conteudo centralizado, fontes locais e icones SVG.
+- Criada a estrutura base para estilos modulares, templates com renderizacao no servidor, conteudo centralizado, fontes locais e icones SVG.
 - Adicionados `README.md` e `HISTORY.md` como documentos oficiais do projeto.
 
 ### Fase 2 - Seguranca e autenticacao inicial da dashboard

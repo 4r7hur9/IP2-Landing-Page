@@ -1,9 +1,9 @@
-# Meta Conversions API
+# Integracao com a Meta Conversions API
 
 ## O que foi instalado
 
 - Servidor Node em `server.js`
-- Endpoint server-side em `POST /api/meta/events`
+- Endpoint no servidor em `POST /api/meta/events`
 - Healthcheck em `GET /api/meta/health`
 - Integracao front-end em `assets/scripts/meta-capi.js`
 - Tracking implementado para:

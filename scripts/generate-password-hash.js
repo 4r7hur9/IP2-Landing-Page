@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const plainTextPassword = process.argv[2];
 
 if (!plainTextPassword) {
-    console.error("Use: npm run generate:password-hash -- \"your-password\"");
+    console.error("Uso: npm run generate:password-hash -- \"sua-senha\"");
     process.exit(1);
 }
 
@@ -13,6 +13,6 @@ bcrypt
         console.log(passwordHash);
     })
     .catch(error => {
-        console.error("Unable to generate password hash:", error.message);
+        console.error("Nao foi possivel gerar o hash da senha:", error.message);
         process.exit(1);
     });

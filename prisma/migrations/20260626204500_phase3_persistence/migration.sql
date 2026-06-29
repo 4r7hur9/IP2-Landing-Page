@@ -1,13 +1,13 @@
--- CreateSchema
+-- Criar schema
 CREATE SCHEMA IF NOT EXISTS "public";
 
--- CreateEnum
+-- Criar enum
 CREATE TYPE "SecurityAuditEventType" AS ENUM ('ADMIN_LOGIN_SUCCESS', 'ADMIN_LOGIN_FAILURE', 'ADMIN_LOGOUT', 'ADMIN_SESSION_REFRESH', 'ADMIN_SESSION_REVOKED', 'ADMIN_UNAUTHORIZED_ACCESS');
 
--- CreateEnum
+-- Criar enum
 CREATE TYPE "MetaEventDeliveryStatus" AS ENUM ('ACCEPTED', 'FAILED', 'CONFIGURATION_ERROR', 'REQUEST_ERROR', 'VALIDATION_ERROR');
 
--- CreateTable
+-- Criar tabela
 CREATE TABLE "AdminSession" (
     "id" TEXT NOT NULL,
     "dashboardUsername" TEXT NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE "AdminSession" (
     CONSTRAINT "AdminSession_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
+-- Criar tabela
 CREATE TABLE "SecurityAuditLog" (
     "id" TEXT NOT NULL,
     "eventType" "SecurityAuditEventType" NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE "SecurityAuditLog" (
     CONSTRAINT "SecurityAuditLog_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
+-- Criar tabela
 CREATE TABLE "MetaEventLog" (
     "id" TEXT NOT NULL,
     "eventId" TEXT NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE "MetaEventLog" (
     CONSTRAINT "MetaEventLog_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
+-- Criar tabela
 CREATE TABLE "MetaQualitySnapshot" (
     "id" TEXT NOT NULL,
     "datasetId" TEXT,
@@ -75,36 +75,36 @@ CREATE TABLE "MetaQualitySnapshot" (
     CONSTRAINT "MetaQualitySnapshot_pkey" PRIMARY KEY ("id")
 );
 
--- CreateIndex
+-- Criar indice
 CREATE INDEX "AdminSession_dashboardUsername_idx" ON "AdminSession"("dashboardUsername");
 
--- CreateIndex
+-- Criar indice
 CREATE INDEX "AdminSession_refreshTokenExpiresAt_idx" ON "AdminSession"("refreshTokenExpiresAt");
 
--- CreateIndex
+-- Criar indice
 CREATE INDEX "AdminSession_revokedAt_idx" ON "AdminSession"("revokedAt");
 
--- CreateIndex
+-- Criar indice
 CREATE INDEX "SecurityAuditLog_eventType_createdAt_idx" ON "SecurityAuditLog"("eventType", "createdAt");
 
--- CreateIndex
+-- Criar indice
 CREATE INDEX "SecurityAuditLog_dashboardUsername_createdAt_idx" ON "SecurityAuditLog"("dashboardUsername", "createdAt");
 
--- CreateIndex
+-- Criar indice unico
 CREATE UNIQUE INDEX "MetaEventLog_eventId_key" ON "MetaEventLog"("eventId");
 
--- CreateIndex
+-- Criar indice
 CREATE INDEX "MetaEventLog_status_createdAt_idx" ON "MetaEventLog"("status", "createdAt");
 
--- CreateIndex
+-- Criar indice
 CREATE INDEX "MetaEventLog_eventName_createdAt_idx" ON "MetaEventLog"("eventName", "createdAt");
 
--- CreateIndex
+-- Criar indice
 CREATE INDEX "MetaEventLog_pageType_createdAt_idx" ON "MetaEventLog"("pageType", "createdAt");
 
--- CreateIndex
+-- Criar indice
 CREATE INDEX "MetaQualitySnapshot_createdAt_idx" ON "MetaQualitySnapshot"("createdAt");
 
--- AddForeignKey
+-- Adicionar chave estrangeira
 ALTER TABLE "SecurityAuditLog" ADD CONSTRAINT "SecurityAuditLog_sessionId_fkey" FOREIGN KEY ("sessionId") REFERENCES "AdminSession"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 

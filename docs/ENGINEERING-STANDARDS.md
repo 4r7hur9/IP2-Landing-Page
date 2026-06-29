@@ -7,6 +7,7 @@ Este documento define as convencoes tecnicas do projeto para manter o codigo cla
 ## Idioma
 
 - Codigo tecnico em ingles.
+- Comentarios de codigo em portugues.
 - Documentacao operacional em portugues.
 - Conteudo publico do site permanece em portugues.
 
