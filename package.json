@@ -3,10 +3,32 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "dev": "node --watch --env-file-if-exists=.env server.js",
+    "build": "npm run build:styles && npm run prisma:generate",
+    "build:styles": "npx @tailwindcss/cli -i ./assets/styles/app.css -o ./assets/styles/site.css --minify",
+    "dev": "concurrently --kill-others-on-fail --names server,styles \"npm run dev:server\" \"npm run dev:styles\"",
+    "dev:server": "node --watch --env-file-if-exists=.env server.js",
+    "dev:styles": "npx @tailwindcss/cli -i ./assets/styles/app.css -o ./assets/styles/site.css --watch",
+    "generate:password-hash": "node ./scripts/generate-password-hash.js",
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate:dev": "npx prisma migrate dev",
+    "prisma:studio": "npx prisma studio",
     "start": "node --env-file-if-exists=.env server.js"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "ejs": "^6.0.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "concurrently": "^10.0.3",
+    "prisma": "^6.19.3",
+    "tailwindcss": "^4.3.1"
   }
 }
