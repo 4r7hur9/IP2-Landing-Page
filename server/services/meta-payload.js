@@ -1,5 +1,6 @@
 const crypto = require("crypto");
 const { cleanText, normalizeEmail, normalizePhone, splitName } = require("../utils/normalize");
+const { getRequestIpAddress } = require("../utils/request-metadata");
 
 const sha256 = value => crypto.createHash("sha256").update(value).digest("hex");
 
@@ -16,13 +17,7 @@ const buildFbc = (fbc, fbclid) => {
 };
 
 const getClientIp = req => {
-    const forwarded = req.headers["x-forwarded-for"];
-
-    if (typeof forwarded === "string" && forwarded) {
-        return forwarded.split(",")[0].trim();
-    }
-
-    return req.ip || "";
+    return getRequestIpAddress(req);
 };
 
 const pickCustomData = payload => {
@@ -110,9 +105,11 @@ const buildMetaEvent = (req, payload) => {
     }
 
     return {
+        customData,
         eventId,
         eventName,
-        metaEvent
+        metaEvent,
+        userData: metaEvent.user_data
     };
 };
 
